@@ -1,0 +1,15 @@
+<?php
+
+use Illuminate\Support\Facades\Route;
+
+Route::get('/', function () {
+    return view('home');
+});
+
+Route::get('/header', function () {
+    return view('header');
+});
+
+Route::get('/feedback', function () {
+    return view('feedback.parents');
+});
