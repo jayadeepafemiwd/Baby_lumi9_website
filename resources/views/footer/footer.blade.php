@@ -31,7 +31,7 @@
 
         <!-- Brand -->
         <div class="col-lg-3 col-md-6" style="margin-top:10px;">
-            <img src="{{ asset('images/logo (2).png') }}" alt="Lumi9" style="height:50px;width:auto;display:block;margin-bottom:6px;object-fit:contain;max-width:100%;">
+            <img src="{{ asset('images/logo (2).webp') }}" alt="Lumi9" style="height:50px;width:auto;display:block;margin-bottom:6px;object-fit:contain;max-width:100%;">
             <div class="footer-logo-sub">Made with love, for your little one.</div>
         </div>
 
@@ -74,7 +74,7 @@
     </div>
 
     <!-- Mascot -->
-    <img class="footer-mascot" src="{{ asset('images/image-2.png') }}" alt="Lumi mascot">
+    <img class="footer-mascot" src="{{ asset('images/image-2.webp') }}" alt="Lumi mascot">
 
     <div class="footer-copy">
         &copy; {{ date('Y') }} Lumi9. All rights reserved. Made with ♥ for little ones.

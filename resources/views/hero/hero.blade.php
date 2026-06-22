@@ -216,7 +216,7 @@
 
     {{-- Banner background --}}
     <img class="hero-banner-img"
-         src="{{ asset('images/hero_banner_output1.png') }}"
+         src="{{ asset('images/hero_banner_output1.webp') }}"
          alt="Lumi9 - Gentle care, every step of the way."
          fetchpriority="high" decoding="async">
 
@@ -226,7 +226,7 @@
          alt="Lumi9 Diaper">
 
     {{-- Logo --}}
-    <img class="hero-logo-img" src="{{ asset('images/lumi9 logo.png') }}" alt="Lumi9">
+    <img class="hero-logo-img" src="{{ asset('images/lumi9 logo.webp') }}" alt="Lumi9">
 
     {{-- Text Overlay --}}
     <div class="hero-text-overlay" id="heroTextOverlay">

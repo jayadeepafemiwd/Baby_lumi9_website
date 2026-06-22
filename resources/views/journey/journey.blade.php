@@ -139,18 +139,21 @@
 
     /* ── Tablet & Mobile (≤1024px): stack vertically ── */
     @media (max-width: 1024px) {
-        .journey-section { padding: 44px 20px 50px; }
+        .journey-section { padding: 44px 16px 50px; }
 
-        /* Stack vertically */
-        .journey-showcase { flex-direction: column; align-items: center; gap: 28px; }
+        /* Switch grid → flex column */
+        .journey-showcase {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 28px;
+        }
 
-        /* Disable float animation on mobile — prevents image floating up */
+        /* Disable float animation on mobile */
         .j-center-img { animation: none !important; transform: none !important; }
 
-        /* Paw wrap: clip internal scroll so main page stays still */
+        /* Paw wrap: horizontal scrollable strip */
         .j-paw-wrap { display: block; width: 100%; overflow: hidden; }
-
-        /* Horizontal scrollable paw strip */
         .journey-paw-selector {
             flex-direction: row; flex: unset; width: 100%;
             overflow-x: auto; overflow-y: visible;
@@ -166,7 +169,7 @@
         .j-paw-label-title { font-size: .75rem; font-weight: 700; }
         .j-paw-label-sub { font-size: .64rem; }
 
-        /* Trail: horizontal 2px line, hide paw icon */
+        /* Trail: horizontal */
         .j-paw-trail {
             flex-direction: row; align-items: center; justify-content: center;
             padding: 0; min-width: 18px; flex-shrink: 0; margin-top: 23px;
@@ -174,16 +177,15 @@
         .j-paw-trail i { display: none; }
         .j-paw-trail .trail-line { width: 18px; height: 2px; background: #b5c47a; }
 
-        /* Center image — aspect-ratio based, no fixed height */
+        /* Center image */
         .journey-center-wrap {
-            flex: unset; width: 88%; max-width: 420px;
+            width: 88%; max-width: 420px;
             margin: 0 auto; display: flex; justify-content: center;
         }
         .j-img-frame {
             width: 100%; height: auto;
             aspect-ratio: 1 / 0.85;
             overflow: hidden; border-radius: 20px;
-            display: block;
         }
         .j-center-img {
             width: 100%; height: 100%;
@@ -193,35 +195,38 @@
 
         /* Features */
         .journey-right {
-            flex: unset; width: 100%; max-width: 520px;
-            margin: 0 auto; align-self: center; gap: 18px;
+            width: 100%; max-width: 100%;
+            margin: 0 auto; gap: 14px;
         }
+        .journey-right-title { font-size: 1.1rem; }
     }
 
     /* ── Mobile (≤640px) ── */
     @media (max-width: 640px) {
         .journey-section { padding: 32px 14px 40px; }
+        .j-sec-title { font-size: 1.4rem; }
         .j-paw-btn { width: 44px; height: 44px; }
         .j-paw-btn img.paw-thumb { width: 30px; height: 30px; }
         .j-paw-row { min-width: 66px; }
         .j-paw-label-sub { display: none; }
-        .j-feat-icon { width: 38px; height: 38px; font-size: .9rem; }
-        .j-feat-title { font-size: .88rem; }
-        .j-feat-desc  { font-size: .78rem; }
-        .journey-right-title { font-size: 1.1rem; }
-        .journey-right { gap: 14px; }
-        .journey-center-wrap { width: 92%; }
+        .j-feat-icon { width: 36px; height: 36px; font-size: .85rem; }
+        .j-feat-title { font-size: .85rem; }
+        .j-feat-desc  { font-size: .75rem; }
+        .j-feat-item  { padding: 9px 11px; gap: 10px; }
+        .journey-center-wrap { width: 94%; }
     }
 
     /* ── Small mobile (≤420px) ── */
     @media (max-width: 420px) {
+        .journey-section { padding: 28px 12px 36px; }
         .j-paw-label { display: none; }
         .j-paw-row { min-width: 52px; }
         .j-paw-btn { width: 40px; height: 40px; }
         .j-paw-btn img.paw-thumb { width: 26px; height: 26px; }
         .j-paw-trail { min-width: 10px; margin-top: 18px; }
         .j-paw-trail .trail-line { width: 10px; }
-        .journey-center-wrap { width: 96%; }
+        .journey-center-wrap { width: 100%; }
+        .j-sec-title { font-size: 1.2rem; }
     }
 </style>
 
@@ -244,7 +249,7 @@
 
             <div class="j-paw-row active" onclick="switchJourneyImg('diaper', this)">
                 <button class="j-paw-btn">
-                    <img class="paw-thumb" src="{{ asset('images/Diaper new.png') }}" alt="Diaper">
+                    <img class="paw-thumb" src="{{ asset('images/Diaper new.webp') }}" alt="Diaper">
                 </button>
                 <div class="j-paw-label">
                     <div class="j-paw-label-title"><b>Lumi9 Diaper</b></div>
@@ -258,7 +263,7 @@
 
             <div class="j-paw-row" onclick="switchJourneyImg('baby', this)">
                 <button class="j-paw-btn">
-                    <img class="paw-thumb" src="{{ asset('images/baby_wear_diaper.png') }}" alt="Baby">
+                    <img class="paw-thumb" src="{{ asset('images/baby_wear_diaper.webp') }}" alt="Baby">
                 </button>
                 <div class="j-paw-label">
                     <div class="j-paw-label-title"><b>Freedom to Play</b></div>
@@ -272,7 +277,7 @@
 
             <div class="j-paw-row" onclick="switchJourneyImg('mom', this)">
                 <button class="j-paw-btn">
-                    <img class="paw-thumb" src="{{ asset('images/mon_care_baby.png') }}" alt="Mom Care">
+                    <img class="paw-thumb" src="{{ asset('images/mon_care_baby.webp') }}" alt="Mom Care">
                 </button>
                 <div class="j-paw-label">
                     <div class="j-paw-label-title"><b>Mom's Gentle Care</b></div>
@@ -286,7 +291,7 @@
 
             <div class="j-paw-row" onclick="switchJourneyImg('sleep', this)">
                 <button class="j-paw-btn">
-                    <img class="paw-thumb" src="{{ asset('images/sleep_baby.png') }}" alt="Sleep Baby">
+                    <img class="paw-thumb" src="{{ asset('images/sleep_baby.webp') }}" alt="Sleep Baby">
                 </button>
                 <div class="j-paw-label">
                     <div class="j-paw-label-title"><b>Peaceful Sleep</b></div>
@@ -300,7 +305,7 @@
 
             <div class="j-paw-row" onclick="switchJourneyImg('features', this)">
                 <button class="j-paw-btn">
-                    <img class="paw-thumb" src="{{ asset('images/diaper_features.png') }}" alt="Diaper Features">
+                    <img class="paw-thumb" src="{{ asset('images/diaper_features.webp') }}" alt="Diaper Features">
                 </button>
                 <div class="j-paw-label">
                     <div class="j-paw-label-title"><b>Diaper Features</b></div>
@@ -316,7 +321,7 @@
             <div class="j-img-frame">
                 <img id="journeyCenterImg"
                      class="j-center-img"
-                     src="{{ asset('images/Diaper new.png') }}"
+                     src="{{ asset('images/Diaper new.webp') }}"
                      alt="Lumi9 Diaper">
             </div>
         </div>
@@ -366,7 +371,7 @@
 <script>
     const journeyData = {
         diaper: {
-            src:   '{{ asset("images/Diaper new.png") }}',
+            src:   '{{ asset("images/Diaper new.webp") }}',
             title: "Why Lumi9 Stands Out",
             feats: [
                 { icon:'fas fa-award',      t:'Premium Quality',           d:"Every Lumi9 diaper is crafted to the highest standards — because your baby deserves nothing but the best." },
@@ -376,7 +381,7 @@
             ]
         },
         baby: {
-            src:   '{{ asset("images/baby_wear_diaper.png") }}',
+            src:   '{{ asset("images/baby_wear_diaper.webp") }}',
             title: "Happy Baby, Every Day",
             feats: [
                 { icon:'fas fa-child',      t:'Active-Fit Design',         d:"Contoured shape and stretchy sides move naturally with baby — perfect for crawling, walking and everything in between." },
@@ -386,7 +391,7 @@
             ]
         },
         mom: {
-            src:   '{{ asset("images/mon_care_baby.png") }}',
+            src:   '{{ asset("images/mon_care_baby.webp") }}',
             title: "Mom's Care & Confidence",
             feats: [
                 { icon:'fas fa-heart',      t:'Easy, Stress-Free Changes', d:"Lumi9's simple tab-and-wrap design makes every diaper change quick, clean and worry-free for moms." },
@@ -396,7 +401,7 @@
             ]
         },
         sleep: {
-            src:   '{{ asset("images/sleep_baby.png") }}',
+            src:   '{{ asset("images/sleep_baby.webp") }}',
             title: "Comfort Through the Night",
             feats: [
                 { icon:'fas fa-moon',        t:'0% Leakage Protection',        d:"Your baby can sleep peacefully through the night without any interruptions." },
@@ -406,7 +411,7 @@
             ]
         },
         features: {
-            src:   '{{ asset("images/diaper_features.png") }}',
+            src:   '{{ asset("images/diaper_features.webp") }}',
             title: "Features of Lumi9 Diaper",
             feats: [
                 { icon:'fas fa-feather-alt', t:'Ultra-Soft Inner Layer',   d:"Hypoallergenic, skin-friendly fabric — gentle on the most delicate newborn skin." },

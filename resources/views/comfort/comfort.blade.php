@@ -73,7 +73,7 @@
 
 <!-- BABY IMAGE -->
 <div class="comfort-baby-abs">
-    <img src="{{ asset('images/baby-dark.png') }}" class="comfort-baby-img" alt="">
+    <img src="{{ asset('images/baby-dark.webp') }}" class="comfort-baby-img" alt="">
 </div>
 
 <div class="comfort-inner">
@@ -92,7 +92,7 @@
         <!-- CARD 1 -->
         <div class="comfort-card">
             <div class="comfort-card-photo" style="background:#fdf6e7;">
-                <img src="{{ asset('images/split_baby_1.png') }}" class="comfort-card-img">
+                <img src="{{ asset('images/split_baby_1.webp') }}" class="comfort-card-img">
             </div>
             <div class="comfort-card-content">
                 <div class="comfort-card-icon"><i class="fas fa-leaf"></i></div>
@@ -105,7 +105,7 @@
         <!-- CARD 2 -->
         <div class="comfort-card">
             <div class="comfort-card-photo" style="background:#fdf6e7;">
-                <img src="{{ asset('images/split_baby_2.png') }}" class="comfort-card-img">
+                <img src="{{ asset('images/split_baby_2.webp') }}" class="comfort-card-img">
             </div>
             <div class="comfort-card-content">
                 <div class="comfort-card-icon"><i class="fas fa-shield-alt"></i></div>
@@ -118,7 +118,7 @@
         <!-- CARD 3 -->
         <div class="comfort-card">
             <div class="comfort-card-photo" style="background:#fdf6e7;">
-                <img src="{{ asset('images/split_baby_3.png') }}" class="comfort-card-img" style="object-position:center 100%;transform:translateY(30px);">
+                <img src="{{ asset('images/split_baby_3.webp') }}" class="comfort-card-img" style="object-position:center 100%;transform:translateY(30px);">
             </div>
             <div class="comfort-card-content">
                 <div class="comfort-card-icon"><i class="fas fa-heart"></i></div>
@@ -131,7 +131,7 @@
         <!-- CARD 4 -->
         <div class="comfort-card">
             <div class="comfort-card-photo" style="background:#fdf6e7;">
-                <img src="{{ asset('images/split_baby_4.png') }}" class="comfort-card-img" style="object-position:left bottom;">
+                <img src="{{ asset('images/split_baby_4.webp') }}" class="comfort-card-img" style="object-position:left bottom;">
             </div>
             <div class="comfort-card-content">
                 <div class="comfort-card-icon"><i class="fas fa-recycle"></i></div>

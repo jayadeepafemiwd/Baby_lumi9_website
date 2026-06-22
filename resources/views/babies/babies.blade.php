@@ -130,7 +130,7 @@
 
         <!-- Col 1: Lumi mascot -->
         <div class="col-lg-1 text-center lumi-mascot-col">
-            <div class="lumi-mascot"><img src="{{ asset('images/image-2.png') }}" alt="Lumi mascot"></div>
+            <div class="lumi-mascot"><img src="{{ asset('images/image-2.webp') }}" alt="Lumi mascot"></div>
         </div>
 
         <!-- Col 2: Left features -->
@@ -156,7 +156,7 @@
             <div class="lumi-circle-wrap">
                 <div class="lumi-baby-circle-outer">
                     <div class="lumi-baby-circle"></div>
-                    <img src="{{ asset('images/image-5.png') }}" alt="Baby" class="lumi-baby-front">
+                    <img src="{{ asset('images/image-5.webp') }}" alt="Baby" class="lumi-baby-front">
                 </div>
             </div>
         </div>
@@ -181,7 +181,7 @@
 
         <!-- Col 5: Sleeping baby -->
         <div class="col-lg-1 text-center lumi-feature-group lumi-sleeping-col">
-<div class="lumi-sleeping"><img src="{{ asset('images/image-1.png') }}" alt="Sleeping Baby"></div>
+<div class="lumi-sleeping"><img src="{{ asset('images/image-1.webp') }}" alt="Sleeping Baby"></div>
         </div>
 
     </div>

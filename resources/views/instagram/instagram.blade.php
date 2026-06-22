@@ -1,6 +1,6 @@
 <section class="gallery-section" aria-label="Gallery">
 <style>
-    .gallery-section{background:#fdf6e7;padding:20px 0 60px;position:relative;margin-top:-60px;overflow-x:clip;}
+    .gallery-section{background:#fdf6e7;padding:20px 0 60px;position:relative;margin-top:-60px;overflow:hidden;width:100%;}
     .gallery-sec-title{font-size:1.75rem;font-weight:700;color:#6d7e2d;text-align:center;margin-bottom:6px;}
     .gallery-sec-title .sec-title-icon{margin:0 10px;font-size:1rem;color:#c8a040;}
     .gallery-sec-sub{text-align:center;color:#7a9450;font-size:.82rem;margin-bottom:44px;}
@@ -43,19 +43,19 @@
         <div class="swiper-wrapper">
             @php
             $gallery = [
-                ['img' => 'smile baby.png',   'label' => 'Cute & Adorable',  'face' => '😊'],
-                ['img' => 'split_baby_1.png', 'label' => 'Kindness & Care',  'face' => '🥰'],
-                ['img' => 'split_baby_2.png', 'label' => 'Active & Playful', 'face' => '😄'],
-                ['img' => 'cry baby.png',     'label' => 'Baby Cry Relief',  'face' => '😢'],
-                ['img' => 'split_baby_4.png', 'label' => 'Sad No More',      'face' => '😔'],
-                ['img' => 'image-5.png',      'label' => 'Peaceful Feeling', 'face' => '😌'],
-                ['img' => 'banner.jpeg',      'label' => 'Pure & Gentle',    'face' => '😇'],
+                ['img' => 'smile baby.webp',   'label' => 'Cute & Adorable',  'face' => '😊'],
+                ['img' => 'split_baby_1.webp', 'label' => 'Kindness & Care',  'face' => '🥰'],
+                ['img' => 'split_baby_2.webp', 'label' => 'Active & Playful', 'face' => '😄'],
+                ['img' => 'cry baby.webp',     'label' => 'Baby Cry Relief',  'face' => '😢'],
+                ['img' => 'split_baby_4.webp', 'label' => 'Sad No More',      'face' => '😔'],
+                ['img' => 'image-5.webp',      'label' => 'Peaceful Feeling', 'face' => '😌'],
+                ['img' => 'split_baby_3.jpeg',      'label' => 'Pure & Gentle',    'face' => '😇'],
             ];
             @endphp
             @foreach($gallery as $g)
             <div class="swiper-slide">
                 <div class="gallery-card">
-                    <div class="gallery-icon-badge"><img src="{{ asset('images/baby_paw.png') }}" alt="paw"></div>
+                    <div class="gallery-icon-badge"><img src="{{ asset('images/baby_paw.webp') }}" alt="paw"></div>
                     <div class="gallery-img-wrap">
                         <img class="gallery-img" src="{{ asset('images/'.$g['img']) }}" alt="{{ $g['label'] }}"
                              onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">

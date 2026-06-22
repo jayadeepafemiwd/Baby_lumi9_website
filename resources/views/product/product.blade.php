@@ -100,7 +100,7 @@
     flex-direction: column;
     min-height: 330px;
     background: rgba(30,58,30,0.25);
-    padding: 7px;
+    padding: 2.5px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.07);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
@@ -201,7 +201,7 @@
 }
 .product-swiper .swiper-slide-active .pc-delivery {
     color: rgba(253,246,231,0.4);
-    border-color: rgba(253,246,231,0.12);
+    border-color: rgba(231, 253, 235, 0.85);
 }
 .pc-name-row {
     display: flex;
@@ -383,7 +383,7 @@
                                 </div>
                             </div>
                             <div class="pc-img-layer">
-                                <img src="{{ asset('images/lumi4.png') }}" alt="Lumi9 NB">
+                                <img src="{{ asset('images/lumi4.webp') }}" alt="Lumi9 NB">
                             </div>
                         </div>
                     </div>
@@ -415,7 +415,7 @@
                                 </div>
                             </div>
                             <div class="pc-img-layer">
-                                <img src="{{ asset('images/lumi7.png') }}" alt="Lumi9 S">
+                                <img src="{{ asset('images/lumi7.webp') }}" alt="Lumi9 S">
                             </div>
                         </div>
                     </div>
@@ -448,7 +448,7 @@
                             </div>
                             <div class="pc-img-layer">
                                 <span class="pc-price-badge">₹ 499</span>
-                                <img src="{{ asset('images/lumi5.png') }}" alt="Lumi9 M">
+                                <img src="{{ asset('images/lumi5.webp') }}" alt="Lumi9 M">
                             </div>
                         </div>
                     </div>
@@ -480,7 +480,7 @@
                                 </div>
                             </div>
                             <div class="pc-img-layer">
-                                <img src="{{ asset('images/lumi9(L).png') }}" alt="Lumi9 L">
+                                <img src="{{ asset('images/lumi9(L).webp') }}" alt="Lumi9 L">
                             </div>
                         </div>
                     </div>
@@ -512,7 +512,7 @@
                                 </div>
                             </div>
                             <div class="pc-img-layer">
-                                <img src="{{ asset('images/lumi6.png') }}" alt="Lumi9 XL">
+                                <img src="{{ asset('images/lumi6.webp') }}" alt="Lumi9 XL">
                             </div>
                         </div>
                     </div>

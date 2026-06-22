@@ -78,7 +78,7 @@
     <nav class="navbar navbar-expand-lg lumi-navbar px-4 px-lg-5 py-0">
         <div class="container-fluid p-0">
             <a class="lumi-logo me-3" href="{{ url('/') }}">
-                <img src="{{ asset('images/logo(1).png') }}" alt="Lumi9 Logo">
+                <img src="{{ asset('images/logo(1).webp') }}" alt="Lumi9 Logo">
             </a>
             <button class="navbar-toggler lumi-toggler ms-auto" type="button"
                     data-bs-toggle="collapse" data-bs-target="#lumiNavMenu"

@@ -12,7 +12,8 @@
     <style>
         :root{--green-dark:#3a5c1e;--green-mid:#4e7a28;--green-sage:#8aac6e;--green-light:#c4d9a8;--green-pale:#e6f2d4;--cream:#f6f1e2;--cream-mid:#ede8d6;--text-dark:#2a3d18;--text-muted:#6b7c5a;}
         *{box-sizing:border-box;margin:0;padding:0;}
-        body{font-family:'Poppins',sans-serif;overflow-x:hidden;background:#fdf6e7;}
+        html{overflow-x:hidden;max-width:100vw;}
+        body{font-family:'Poppins',sans-serif;overflow-x:hidden;max-width:100vw;background:#fdf6e7;}
         a{text-decoration:none;}
         /* Header */
         .lumi-header{background-color:#8aa74b;}
@@ -68,7 +69,7 @@
     <nav class="navbar navbar-expand-lg lumi-navbar px-4 px-lg-5 py-0">
         <div class="container-fluid p-0">
             <a class="lumi-logo me-3" href="{{ url('/') }}">
-                <img src="{{ asset('images/logo(1).png') }}" alt="Lumi9 Logo">
+                <img src="{{ asset('images/logo(1).webp') }}" alt="Lumi9 Logo">
             </a>
             <button class="navbar-toggler lumi-toggler ms-auto" type="button"
                     data-bs-toggle="collapse" data-bs-target="#lumiNavMenu"

@@ -61,7 +61,7 @@
 </div>
 
 <div class="lumi-mq-area">
-<img src="{{ asset('images/baby.png') }}" alt="Baby" class="lumi-baby-img">
+<img src="{{ asset('images/baby.webp') }}" alt="Baby" class="lumi-baby-img">
     <svg class="lumi-flower-dot" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
         <ellipse cx="18" cy="8" rx="5" ry="9" fill="#3d5a1a" transform="rotate(0   18 18)"/>
         <ellipse cx="18" cy="8" rx="5" ry="9" fill="#3d5a1a" transform="rotate(45  18 18)"/>
