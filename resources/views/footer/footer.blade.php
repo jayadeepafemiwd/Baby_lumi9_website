@@ -1,7 +1,7 @@
-<footer class="lumi-footer" aria-label="Footer">
+<footer class="lumi-footer" id="contact" aria-label="Footer">
 <style>
     .lumi-footer{background:#f5eac3;color:#3d5a1a;font-family:'Poppins',sans-serif;position:relative;margin-top:0;}
-    .lumi-footer-wave{display:block;line-height:0;background:#fdf6e7;}
+    .lumi-footer-wave{display:block;line-height:0;background:#f5eac3;}
     .lumi-footer-wave svg{display:block;width:100%;height:70px;}
     .lumi-footer-inner{padding:36px 60px 28px;position:relative;overflow:hidden;}
     .footer-logo-name{font-size:2rem;font-weight:900;color:#3d5a1a;line-height:1;}

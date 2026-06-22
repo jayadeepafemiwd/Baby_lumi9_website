@@ -6,8 +6,7 @@
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
     <title>Lumi9 - Made with love, for your little one.</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,500&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,900&display=swap" rel="stylesheet">    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
     <style>
@@ -78,10 +77,10 @@
             </button>
             <div class="collapse navbar-collapse" id="lumiNavMenu">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a href="{{ url('/') }}" class="nav-link {{ request()->is('/') ? 'active' : '' }}">Home</a></li>
-                    <li class="nav-item"><a href="{{ url('/about') }}" class="nav-link {{ request()->is('about*') ? 'active' : '' }}">About Us</a></li>
+                    <li class="nav-item"><a href="#home" class="nav-link lumi-scroll-link active">Home</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link lumi-scroll-link">About Us</a></li>
                     <li class="nav-item"><a href="{{ url('/shop') }}" class="nav-link {{ request()->is('shop*') ? 'active' : '' }}">Shop</a></li>
-                    <li class="nav-item"><a href="{{ url('/contact') }}" class="nav-link {{ request()->is('contact*') ? 'active' : '' }}">Contact</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link lumi-scroll-link">Contact</a></li>
                 </ul>
                 <div class="lumi-icons">
                     <a class="lumi-icon-btn" href="{{ url('/cart') }}" aria-label="Cart">
@@ -110,10 +109,11 @@
         </svg>
     </div>
 </header>
-
+@include('hero.hero')
 @include('features.features')
 @include('babies.babies')
 @include('comfort.comfort')
+@include('product.product')
 @include('feedback.parents')
 @include('instagram.instagram')
 @include('journey.journey')
@@ -153,6 +153,44 @@ window.addEventListener('load',function(){
         });
     });
 });
+/* Smooth scroll for nav links */
+(function(){
+    var headerH = document.querySelector('.lumi-header') ? document.querySelector('.lumi-header').offsetHeight : 76;
+    document.querySelectorAll('.lumi-scroll-link').forEach(function(link){
+        link.addEventListener('click', function(e){
+            var target = document.querySelector(this.getAttribute('href'));
+            if(!target) return;
+            e.preventDefault();
+            var top = target.getBoundingClientRect().top + window.scrollY - headerH;
+            window.scrollTo({ top: top, behavior: 'smooth' });
+            /* close mobile menu */
+            var menu = document.getElementById('lumiNavMenu');
+            if(menu && menu.classList.contains('show')){
+                var toggler = document.querySelector('.lumi-toggler');
+                if(toggler) toggler.click();
+            }
+        });
+    });
+    /* active link on scroll */
+    var sections = [
+        { id: 'home', link: document.querySelector('a[href="#home"]') },
+        { id: 'about', link: document.querySelector('a[href="#about"]') },
+        { id: 'contact', link: document.querySelector('a[href="#contact"]') }
+    ];
+    window.addEventListener('scroll', function(){
+        var scrollY = window.scrollY + headerH + 40;
+        sections.forEach(function(s){
+            var el = document.getElementById(s.id);
+            if(!el || !s.link) return;
+            var top = el.offsetTop;
+            var bottom = top + el.offsetHeight;
+            if(scrollY >= top && scrollY < bottom){
+                document.querySelectorAll('.lumi-scroll-link').forEach(function(l){ l.classList.remove('active'); });
+                s.link.classList.add('active');
+            }
+        });
+    });
+})();
 /* Search toggle */
 (function(){
     var b=document.getElementById('lumiSearchBtn'),w=document.getElementById('lumiSearchWrap');

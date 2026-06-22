@@ -1,47 +1,93 @@
 <style>
-    /* ============================================================
-       FEATURES STRIP
-    ============================================================ */
     .features-strip {
         background: #f5eac3;
-        padding: 30px 50px 55px;
+        padding: 38px 45px 29px;
+    }
+
+    /* Desktop: single row, 5 items */
+    .features-inner {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        flex-wrap: nowrap;
     }
 
     .feat-item {
         display: flex;
         flex-direction: row;
         align-items: center;
-        gap: 15px;
+        gap: 12px;
         text-align: left;
         position: relative;
         flex: 1;
         justify-content: center;
-        padding: 8px 0;
+        padding: 6px 8px;
     }
+
+    /* Vertical divider between items — desktop only */
     .feat-item:not(:last-child)::after {
         content: '';
         position: absolute;
         right: 0; top: 50%;
         transform: translateY(-50%);
-        height: 36px; width: 1.5px;
+        height: 32px; width: 1.5px;
         background: #b5c47a;
     }
 
     .feat-icon-wrap {
-        width: 48px; height: 48px;
+        width: 34px; height: 34px;
         background: transparent;
         display: flex; align-items: center; justify-content: center;
-        font-size: 2rem; color: #6d7e2d; flex-shrink: 0;
+        font-size: 1.35rem; color: #6d7e2d; flex-shrink: 0;
     }
 
-    .feat-label { font-size: .95rem; font-weight: 700; color: #6d7e2d; line-height: 1.3; }
+    .feat-label {
+        font-size: .76rem; font-weight: 700;
+        color: #6d7e2d; line-height: 1.3;
+    }
+
+    /* Mobile ≤ 767px: compact single row, same as desktop strip */
+    @media (max-width: 767px) {
+        .features-strip { padding: 10px 0; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+        .features-inner {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            width: max-content;
+            min-width: 100%;
+            padding: 0 8px;
+            gap: 0;
+        }
+        .feat-item {
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            padding: 6px 10px;
+            min-width: 80px;
+            flex: 0 0 auto;
+        }
+        .feat-item:not(:last-child)::after {
+            display: block;
+            height: 24px; width: 1.5px;
+            top: 50%; right: 0;
+            transform: translateY(-50%);
+        }
+        .feat-icon-wrap { font-size: 1.1rem; width: 28px; height: 28px; }
+        .feat-label { font-size: .58rem; }
+    }
+
+    @media (max-width: 420px) {
+        .feat-item { min-width: 70px; padding: 5px 7px; gap: 3px; }
+        .feat-icon-wrap { font-size: 1rem; width: 24px; height: 24px; }
+        .feat-label { font-size: .54rem; }
+    }
 </style>
 
-<!-- ================================================================
-     FEATURES STRIP
-================================================================ -->
 <section class="features-strip">
-    <div class="d-flex justify-content-around align-items-center flex-wrap w-100">
+    <div class="features-inner">
 
         <div class="feat-item">
             <div class="feat-icon-wrap"><i class="fas fa-cloud"></i></div>

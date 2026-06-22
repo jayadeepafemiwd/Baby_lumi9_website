@@ -3,11 +3,11 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('home');
+    return view('header.header');
 });
 
 Route::get('/header', function () {
-    return view('header');
+    return view('header.header');
 });
 
 Route::get('/feedback', function () {

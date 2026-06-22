@@ -1,12 +1,12 @@
 ﻿<section class="lumi-parents" aria-label="Loved by Parents">
 <style>
-    .lumi-parents{background:#fdf6e7;padding:65px 0 60px;font-family:'Nunito',sans-serif;position:relative;overflow:hidden;margin-top:-60px;}
+    .lumi-parents{background:#f5eac3;padding:65px 0 60px;font-family:'Nunito',sans-serif;position:relative;overflow:hidden;margin-top:-60px;}
     .lumi-parents-top-wave{position:absolute;top:0;left:0;width:100%;height:100px;z-index:2;pointer-events:none;}
     .lumi-parents-top-wave svg{width:100%;height:100%;display:block;}
-    .lumi-parents-header{position:relative;z-index:10;margin-bottom:-22px;padding-bottom:10px;text-align:center;display:flex;flex-direction:column;align-items:center;background:#fdf6e7;width:fit-content;margin-left:auto;margin-right:auto;padding-left:32px;padding-right:32px;}
-    .lumi-parents-title{font-weight:900;font-size:28px;color:#607919;text-align:center;margin-bottom:4px;display:inline-flex;align-items:center;justify-content:center;gap:10px;letter-spacing:-.3px;background:#fdf6e7;padding:0 20px;}
-    .lumi-parents-sub{text-align:center;font-size:14px;color:#7a8a60;margin-bottom:0;display:inline-block;background:#fdf6e7;padding:0 14px;}
-    .lumi-mq-area{position:relative;margin:0 50px;padding:26px 0 22px;border:1.5px dashed #8aa74b;border-radius:40px;background:#fdf6e7;isolation:isolate;}
+    .lumi-parents-header{position:relative;z-index:10;margin-bottom:-22px;padding-bottom:10px;text-align:center;display:flex;flex-direction:column;align-items:center;background:#f5eac3;width:fit-content;margin-left:auto;margin-right:auto;padding-left:32px;padding-right:32px;}
+    .lumi-parents-title{font-weight:900;font-size:28px;color:#607919;text-align:center;margin-bottom:4px;display:inline-flex;align-items:center;justify-content:center;gap:10px;letter-spacing:-.3px;background:#f5eac3;padding:0 20px;}
+    .lumi-parents-sub{text-align:center;font-size:14px;color:#7a8a60;margin-bottom:0;display:inline-block;background:#f5eac3;padding:0 14px;}
+    .lumi-mq-area{position:relative;margin:0 50px;padding:26px 0 22px;border:1.5px dashed #8aa74b;border-radius:40px;background:#f5eac3;isolation:isolate;}
     .lumi-baby-img{position:absolute;top:-80px;right:80px;width:155px;z-index:6;pointer-events:none;filter:drop-shadow(0 4px 12px rgba(96,121,25,0.12));}
     .lumi-flower-dot{position:absolute;left:0px;top:-18px;width:36px;z-index:6;pointer-events:none;}
     .lumi-mq-row{overflow:hidden;padding:6px 0;}

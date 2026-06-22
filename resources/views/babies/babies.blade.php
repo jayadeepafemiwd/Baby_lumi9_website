@@ -1,7 +1,7 @@
 ﻿<section class="lumi-babies" aria-label="Why Babies Love Lumi">
 <style>
 
-    .lumi-babies{background:#fdf6e7;position:relative;padding:65px 0 0;overflow:hidden;font-family:'Nunito',sans-serif;}
+    .lumi-babies{background:#fdf6e7;position:relative;padding:65px 0 0;overflow:hidden;font-family:'Nunito',sans-serif; margin-top:-2%;}
     .lumi-babies-title{font-weight:900;font-size:24px;color:#607919;text-align:center;margin-top:-20px;margin-bottom:20px;display:flex;align-items:center;justify-content:center;gap:20px;letter-spacing:-.3px;}
     .lumi-feature{display:flex;align-items:flex-start;gap:14px;margin-bottom:24px;}
     .lumi-feature-icon{width:44px;height:44px;min-width:44px;background:#8aa74b;border-radius:50%;display:flex;align-items:center;justify-content:center;}
@@ -110,8 +110,8 @@
 <!-- Top: 2 wide wave lines, each with only 2 bends (gentle S-curve) -->
 <div style="position:absolute;top:0;left:0;right:0;height:44px;z-index:5;line-height:0;pointer-events:none;" aria-hidden="true">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 44" preserveAspectRatio="none" width="100%" height="44">
-        <!-- Fill area above wave with babies bg color -->
-        <path d="M0,22 C240,6 480,6 720,22 C960,38 1200,38 1440,22 L1440,0 L0,0 Z" fill="#fdf6e7"/>
+        <!-- Fill area above wave with features strip color — merges seamlessly -->
+        <path d="M0,22 C240,6 480,6 720,22 C960,38 1200,38 1440,22 L1440,0 L0,0 Z" fill="#f5eac3" />
         <!-- Single wave line — 2 bends: curves up then down -->
         <path d="M0,22 C240,6 480,6 720,22 C960,38 1200,38 1440,22" fill="none" stroke="#8aa74b" stroke-width="3" stroke-linecap="round"/>
     </svg>
