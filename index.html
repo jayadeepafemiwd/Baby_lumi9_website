@@ -1,0 +1,2292 @@
+<!DOCTYPE html>
+<!-- saved from url=(0028)http://127.0.0.1:8000/header -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="http://127.0.0.1:8000/favicon.ico">
+    <title>Lumi9 - Made with love, for your little one.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+<link href="./index_files/css2" rel="stylesheet">    <link href="./index_files/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./index_files/all.min.css">
+    <link rel="stylesheet" href="./index_files/swiper-bundle.min.css">
+    <style>
+        :root{--green-dark:#3a5c1e;--green-mid:#4e7a28;--green-sage:#8aac6e;--green-light:#c4d9a8;--green-pale:#e6f2d4;--cream:#f6f1e2;--cream-mid:#ede8d6;--text-dark:#2a3d18;--text-muted:#6b7c5a;}
+        *{box-sizing:border-box;margin:0;padding:0;}
+        html{overflow-x:hidden;max-width:100vw;}
+        body{font-family:'Poppins',sans-serif;overflow-x:hidden;max-width:100vw;background:#fdf6e7;}
+        a{text-decoration:none;}
+        /* Header */
+        .lumi-header{background-color:#8aa74b;}
+        .lumi-logo{display:flex;text-decoration:none;padding:0;flex-shrink:0;align-self:center;}
+        .lumi-logo img{height:54px;width:auto;display:block;}
+        .lumi-navbar{align-items:center;min-height:76px;}
+        .lumi-navbar .navbar-collapse{align-items:center;}
+        .lumi-navbar .nav-link{color:#e8f090!important;font-size:14px;font-weight:700;padding:6px 16px!important;border-bottom:2px solid transparent;transition:color .2s,border-color .2s;white-space:nowrap;}
+        .lumi-navbar .nav-link:hover,.lumi-navbar .nav-link.active{color:#fff!important;border-bottom-color:#fff;}
+        .lumi-icons{display:flex;align-items:center;gap:20px;align-self:center;}
+        .lumi-icon-btn{color:#e8f090;text-decoration:none;display:flex;align-items:center;background:none;border:none;padding:0;cursor:pointer;transition:color .2s,transform .15s;}
+        .lumi-icon-btn:hover{color:#fff;transform:scale(1.12);}
+        .lumi-toggler{border:1.5px solid rgba(232,240,144,.4)!important;border-radius:6px;padding:5px 9px;}
+        .lumi-toggler .navbar-toggler-icon{background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(232,240,144,1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")!important;}
+        @media(max-width:991.98px){
+            .lumi-navbar .navbar-collapse{background-color:#6e8840;border-radius:0 0 14px 14px;padding:4px 20px 18px;}
+            .lumi-navbar .nav-link{padding:12px 4px!important;border-bottom:1px solid rgba(255,255,255,.1)!important;}
+            .lumi-navbar .navbar-nav .nav-item:last-child .nav-link{border-bottom:none!important;}
+            .lumi-icons{border-top:1px solid rgba(255,255,255,.1);padding-top:14px;margin-top:6px;}
+        }
+        .lumi-search-wrap{background-color:#6e8840;max-height:0;overflow:hidden;transition:max-height .3s ease;}
+        .lumi-search-wrap.open{max-height:60px;}
+        .lumi-search-form{display:flex;align-items:center;gap:10px;max-width:540px;width:calc(100% - 48px);margin:9px auto;padding:8px 20px;background:rgba(255,255,255,.13);border-radius:50px;}
+        .lumi-search-input{flex:1;background:none;border:none;outline:none;color:#fff;font-size:14px;font-family:'Nunito',sans-serif;}
+        .lumi-search-input::placeholder{color:#b0c850;}
+        .lumi-search-submit{background:none;border:none;cursor:pointer;color:#e8f090;display:flex;align-items:center;padding:0;flex-shrink:0;}
+        .lumi-wave{display:block;background-color:#8aa74b;line-height:0;margin:0;padding:0;}
+        .lumi-wave svg{display:block;width:100%;height:20px;}
+        /* Swiper overrides */
+        .swiper-button-next,.swiper-button-prev{color:#fff;background:#8aa74b;width:38px;height:38px;border-radius:50%;box-shadow:0 3px 12px rgba(138,167,75,0.35);top:42%;}
+        .swiper-button-next:hover,.swiper-button-prev:hover{background:#607919;}
+        .swiper-button-next::after,.swiper-button-prev::after{font-size:13px;font-weight:800;}
+        .swiper-pagination-bullet{background:#8aa74b;opacity:.4;}
+        .swiper-pagination-bullet-active{background:#3d5a1a!important;opacity:1;}
+        /* Banner */
+        .banner-section{position:relative;width:100%;line-height:0;overflow:hidden;}
+        .banner-img{width:100%;height:auto;display:block;object-fit:cover;max-height:600px;}
+        .banner-diaper-img{position:absolute;right:8%;bottom:10%;width:28%;max-width:340px;height:auto;object-fit:contain;filter:drop-shadow(0 8px 24px rgba(0,0,0,0.22));pointer-events:none;}
+        @media(max-width:767px){.banner-img{max-height:220px;}.banner-diaper-img{width:36%;right:4%;bottom:6%;}}
+        @media(max-width:480px){.banner-img{max-height:180px;}.banner-diaper-img{width:40%;right:2%;bottom:4%;}}
+        @media(min-width:768px) and (max-width:991px){.banner-img{max-height:380px;}.banner-diaper-img{width:30%;right:6%;bottom:8%;}}
+        /* Features strip */
+        .features-strip{background:#fdf6e7;padding:28px 60px;border-bottom:none;}
+        .feat-item{display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;}
+        .feat-icon-wrap{width:52px;height:52px;background:var(--green-pale);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:var(--green-dark);}
+        .feat-label{font-size:.74rem;font-weight:600;color:var(--text-dark);line-height:1.35;}
+        @media(max-width:991px){.features-strip{padding:28px 20px;}}
+        @media(max-width:575px){.features-strip{padding:20px 12px;}.feat-icon-wrap{width:42px;height:42px;font-size:1rem;}.feat-label{font-size:.68rem;}}
+    </style>
+</head>
+<body>
+<header class="lumi-header">
+    <nav class="navbar navbar-expand-lg lumi-navbar px-4 px-lg-5 py-0">
+        <div class="container-fluid p-0">
+            <a class="lumi-logo me-3" href="http://127.0.0.1:8000/">
+                <img src="./index_files/logo(1).webp" alt="Lumi9 Logo">
+            </a>
+            <button class="navbar-toggler lumi-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#lumiNavMenu" aria-controls="lumiNavMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="lumiNavMenu">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a href="http://127.0.0.1:8000/header#home" class="nav-link lumi-scroll-link active">Home</a></li>
+                    <li class="nav-item"><a href="http://127.0.0.1:8000/header#about" class="nav-link lumi-scroll-link">About Us</a></li>
+                    <li class="nav-item"><a href="http://127.0.0.1:8000/shop" class="nav-link ">Shop</a></li>
+                    <li class="nav-item"><a href="http://127.0.0.1:8000/header#contact" class="nav-link lumi-scroll-link">Contact</a></li>
+                </ul>
+                <div class="lumi-icons">
+                    <a class="lumi-icon-btn" href="http://127.0.0.1:8000/cart" aria-label="Cart">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 01-8 0"></path></svg>
+                    </a>
+                    <a class="lumi-icon-btn" href="http://127.0.0.1:8000/account" aria-label="Account">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    </a>
+                    <button class="lumi-icon-btn" id="lumiSearchBtn" aria-label="Search">
+                        <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="lumi-search-wrap" id="lumiSearchWrap">
+        <form action="http://127.0.0.1:8000/search" method="GET" class="lumi-search-form">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#b0c850" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <input class="lumi-search-input" type="text" name="q" placeholder="Search products..." autocomplete="off" value="">
+            <button class="lumi-search-submit" type="submit"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button>
+        </form>
+    </div>
+    <div class="lumi-wave" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 60" preserveAspectRatio="none">
+            <path fill="#fdf6e7" d="M0,60 L40,8 Q80,65 120,8 Q160,65 200,8 Q240,65 280,8 Q320,65 360,8 Q400,65 440,8 Q480,65 520,8 Q560,65 600,8 Q640,65 680,8 Q720,65 760,8 Q800,65 840,8 Q880,65 920,8 Q960,65 1000,8 Q1040,65 1080,8 Q1120,65 1160,8 Q1200,65 1240,8 Q1280,65 1320,8 Q1360,65 1400,8 L1440,60 Z"></path>
+        </svg>
+    </div>
+</header>
+<style>
+    /* ============================================================
+       HERO SECTION
+    ============================================================ */
+    .hero-section {
+        position: relative;
+        line-height: 0;
+        overflow: hidden;
+        background: #f5eac3;
+        /* Always = viewport width × (850/1851) — works on all screen sizes */
+        height: calc(100vw * 850 / 1851 * 0.985);
+        max-height: 848px;
+    }
+
+    .hero-wave { position: absolute; bottom: -2%; left: 0; width: 100%; z-index: 15; line-height: 0; }
+    .hero-wave svg { width: 100%; height: auto; display: block; }
+
+    .hero-logo-img {
+        position: absolute;
+        top: 4%; left: 4%;
+        width: 11%; height: auto;
+        z-index: 8; pointer-events: none;
+    }
+
+    .hero-section .hero-banner-img {
+        width: 100%; height: 100%;
+        object-fit: cover; object-position: center center;
+        display: block;
+    }
+
+    .hero-diaper-gif {
+        position: absolute;
+        left: 67%; bottom: 14%;
+        transform: translateX(-50%);
+        width: 45%; max-width: 740px;
+        pointer-events: none;
+        filter: drop-shadow(0 8px 16px rgba(0,0,0,0.18));
+    }
+
+    /* TEXT OVERLAY */
+    .hero-text-overlay {
+        position: absolute;
+        top: 20%; left: 4%;
+        z-index: 10;
+        display: flex; flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        max-width: 32%;
+        font-family: 'Nunito', sans-serif;
+    }
+
+    /* ── Top eyebrow: "— LUMI9 —" with side dashes ── */
+    .hero-text-dash {
+        display: flex; align-items: center; gap: 0.6vw;
+        color: #6d7e2d; font-family: 'Nunito', sans-serif;
+        font-size: 0.68vw; font-weight: 800; letter-spacing: 0.22em;
+        text-transform: uppercase; margin-bottom: 0.85vw;
+        opacity: 0; transition: opacity 0.5s ease;
+    }
+    .hero-text-dash::before,
+    .hero-text-dash::after {
+        content: '';
+        display: block;
+        width: 2vw; height: 1.5px;
+        background: #6d7e2d; border-radius: 2px;
+        flex-shrink: 0;
+    }
+    .hero-text-dash.show { opacity: 1; }
+
+    .hero-eyebrow {
+        font-size: 0.85vw; font-weight: 700; color: #6d7e2d;
+        letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.5vw;
+        opacity: 0; transform: translateY(10px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .hero-eyebrow.show { opacity: 1; transform: translateY(0); }
+
+    /* ── Main big lines ── */
+    .hero-big-line {
+        font-family: 'Nunito', sans-serif;
+        font-weight: 800; line-height: 1.2;
+        opacity: 0; transform: translateY(16px);
+        transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .hero-big-line.show { opacity: 1; transform: translateY(0); }
+
+    /* Line 1: large bold serif */
+    .hero-big-line-1 {
+        font-size: 3.25vw; color: #2a3d18;
+        letter-spacing: -0.5px; margin-bottom: 0.7vw;
+    }
+
+    /* Line 2: cursive + ribbon/banner background (like "en Amazon") */
+    .hero-big-line-2 {
+        display: flex; align-items: center; justify-content: center;
+        margin-top: 0.7vw;
+        margin-bottom: 0.7vw;
+    }
+    .hero-ribbon {
+        font-family: 'Nunito', sans-serif;
+        font-size: 1.75vw; font-weight: 800;
+        color: #fff;
+        background: #6d7e2d;
+        padding: 0.35vw 3vw;
+        display: inline-block;
+        line-height: 1.6;
+        /* Inward V-notch both ends — exact match to "en Amazon" ribbon style */
+        clip-path: polygon(
+            0%   0%,
+            100% 0%,
+            91%  50%,
+            100% 100%,
+            0%   100%,
+            9%   50%
+        );
+    }
+
+    /* Line 3: LOVE */
+    .hero-big-line-3 {
+        font-size: 3.5vw; color: #3a5c1e;
+        font-weight: 800; letter-spacing: -0.5px;
+        margin-bottom: 0.35vw; margin-top: 0.15vw;
+    }
+
+    /* Tagline */
+    .hero-tagline {
+        font-family: 'Nunito', sans-serif;
+        font-size: 0.9vw; color: #567439;
+        font-weight: 600; font-style: italic; line-height: 1.7; margin-top: 0.6vw;
+        opacity: 0; transform: translateY(12px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .hero-tagline.show { opacity: 1; transform: translateY(0); }
+
+    /* Shop button — pill style like the Amazon image */
+    .hero-shop-btn {
+        display: inline-flex; align-items: center;
+        gap: 0.5vw; margin-top: 1vw; padding: 1vw 1.9vw;
+        background: #6d7e2d; color: #fff;
+        font-family: 'Nunito', sans-serif;
+        font-size: 0.88vw; font-weight: 800;
+        border-radius: 10px;
+        margin-top:9%;
+        border: 2px solid #6d7e2d;
+        cursor: pointer; text-decoration: none; text-transform: uppercase;
+        letter-spacing: 0.1em;
+        opacity: 0; transform: translateY(14px);
+        transition: opacity 0.7s ease, transform 0.7s ease, background 0.2s, color 0.2s;
+    }
+    .hero-shop-btn:hover { background: transparent; color: #3a5c1e; }
+    .hero-shop-btn.show  { opacity: 1; transform: translateY(0); }
+
+    .hero-deco-arrows {
+        position: absolute; right: 3%; top: 50%;
+        transform: translateY(-50%);
+        display: flex; flex-direction: column; gap: 0.6vw;
+        opacity: 0; z-index: 10; transition: opacity 0.8s ease 2.6s;
+    }
+    .hero-deco-arrows.show { opacity: 0.32; }
+    .hero-deco-arrow {
+        width: 1.4vw; height: 1.4vw;
+        border-right: 0.22vw solid #6d7e2d;
+        border-bottom: 0.22vw solid #6d7e2d;
+        transform: rotate(-45deg);
+    }
+
+    @media (max-width: 1200px) {
+        .hero-logo-img { width: 10%; top: 4%; }
+        .hero-text-overlay { top: 12%; max-width: 34%; }
+    }
+    @media (max-width: 991px) {
+        .hero-logo-img { width: 12%; top: 4%; left: 3%; }
+        .hero-text-overlay { top: 14%; max-width: 36%; left: 3%; }
+        .hero-big-line { line-height: 1.2; }
+        .hero-big-line-1 { font-size: 3.8vw; margin-bottom: 0.5vw; }
+        .hero-ribbon { font-size: 2vw; padding: 0.3vw 2.5vw; }
+        .hero-big-line-2 { margin-bottom: 0.5vw; }
+        .hero-big-line-3 { font-size: 4vw; margin-bottom: 0.5vw; margin-top: 0.2vw; }
+        .hero-tagline { font-size: 1.5vw; margin-top: 0.5vw; }
+        .hero-text-dash { font-size: 0.65vw; margin-bottom: 0.6vw; }
+        .hero-shop-btn { font-size: 0.7vw; margin-top: 0.8vw; }
+        .hero-deco-arrows { display: none; }
+    }
+    @media (max-width: 767px) {
+        /* Base .hero-section height: calc(100vw * 850/1851) handles size automatically */
+        .hero-logo-img { display: none; }
+        .hero-text-overlay { top: 6%; max-width: 40%; left: 3%; }
+        .hero-big-line { line-height: 1.1; }
+        .hero-text-dash { font-size: 0.7vw; margin-bottom: 0.4vw; }
+        .hero-big-line-1 { font-size: 4vw; margin-bottom: 0.35vw; }
+        .hero-ribbon { font-size: 2vw; padding: 0.2vw 2vw; }
+        .hero-big-line-2 { margin-bottom: 0.35vw; }
+        .hero-big-line-3 { font-size: 4.5vw; margin-bottom: 0.3vw; margin-top: 0.15vw; }
+        .hero-tagline { font-size: 1.5vw; margin-top: 0.3vw; }
+        .hero-shop-btn { font-size: 0.65vw; padding: 0.4vw 1.2vw; margin-top: 0.5vw; }
+        .hero-deco-arrows { display: none; }
+    }
+    @media (max-width: 480px) {
+        .hero-logo-img { display: none; }
+        .hero-text-overlay { top: 5%; max-width: 43%; left: 2.5%; }
+        .hero-big-line { line-height: 1.05; }
+        .hero-text-dash { font-size: 0.7vw; margin-bottom: 0.3vw; }
+        .hero-big-line-1 { font-size: 4.2vw; margin-bottom: 0.28vw; }
+        .hero-ribbon { font-size: 2.1vw; padding: 0.18vw 1.8vw; }
+        .hero-big-line-2 { margin-bottom: 0.28vw; }
+        .hero-big-line-3 { font-size: 4.8vw; margin-bottom: 0.25vw; margin-top: 0.1vw; }
+        .hero-tagline { font-size: 1.6vw; margin-top: 0.25vw; }
+        .hero-shop-btn { font-size: 0.65vw; padding: 0.35vw 1vw; margin-top: 0.4vw; border-width: 1.5px; }
+    }
+</style>
+
+<!-- ================================================================
+     HERO SECTION
+================================================================ -->
+<section class="hero-section" id="home">
+
+    
+    <img class="hero-banner-img" src="./index_files/hero_banner_output1.webp" alt="Lumi9 - Gentle care, every step of the way." fetchpriority="high" decoding="async">
+
+    
+    <img class="hero-diaper-gif" id="heroDiaperGif" data-src="http://127.0.0.1:8000/images/download (6).gif" alt="Lumi9 Diaper" src="./index_files/download (6).gif">
+
+    
+    <img class="hero-logo-img" src="./index_files/lumi9 logo.webp" alt="Lumi9">
+
+    
+    <div class="hero-text-overlay" id="heroTextOverlay">
+
+        
+        <!-- <div class="hero-text-dash" id="heroTextDash">LUMI9 DIAPER</div> -->
+
+        
+        <div class="hero-big-line hero-big-line-1 show" id="heroBigLine1">Every Touch</div>
+
+        
+        <div class="hero-big-line hero-big-line-2 show" id="heroBigLine2">
+            <span class="hero-ribbon">feels like</span>
+        </div>
+
+        
+        <div class="hero-big-line hero-big-line-3 show" id="heroBigLine3">Love</div>
+
+        
+        <div class="hero-tagline show" id="heroTagline">
+            <b>Gentle comfort. Happy moments.</b>
+        </div>
+
+        
+        <a href="http://127.0.0.1:8000/header#" class="hero-shop-btn show" id="heroShopBtn">
+            <i class="fas fa-leaf"></i> View Collection
+        </a>
+
+    </div>
+
+    
+    <div class="hero-deco-arrows show" id="heroDecoArrows">
+        <div class="hero-deco-arrow"></div>
+        <div class="hero-deco-arrow"></div>
+        <div class="hero-deco-arrow"></div>
+    </div>
+
+    
+    <div class="hero-wave">
+        <svg viewBox="0 0 1440 90" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,62 C160,90 320,34 480,62 C640,90 800,34 960,66 C1100,88 1280,38 1440,62 L1440,90 L0,90 Z" fill="#f5eac3"></path>
+            <path d="M0,62 C160,90 320,34 480,62 C640,90 800,34 960,66 C1100,88 1280,38 1440,62" fill="none" stroke="#beaf81" stroke-width="2.5"></path>
+        </svg>
+    </div>
+
+</section>
+
+<script>
+    function runHeroAnim() {
+        const dash    = document.getElementById('heroTextDash');
+        const eyebrow = document.getElementById('heroEyebrow');
+        const line1   = document.getElementById('heroBigLine1');
+        const line2   = document.getElementById('heroBigLine2');
+        const line3   = document.getElementById('heroBigLine3');
+        const tagline = document.getElementById('heroTagline');
+        const btn     = document.getElementById('heroShopBtn');
+        const arrows  = document.getElementById('heroDecoArrows');
+
+        [dash, eyebrow, line1, line2, line3, tagline, btn, arrows].forEach(el => {
+            if (el) el.classList.remove('show');
+        });
+
+        setTimeout(() => dash    && dash.classList.add('show'),    150);
+        setTimeout(() => eyebrow && eyebrow.classList.add('show'), 300);
+        setTimeout(() => line1   && line1.classList.add('show'),   600);
+        setTimeout(() => line2   && line2.classList.add('show'),   1000);
+        setTimeout(() => line3   && line3.classList.add('show'),   1400);
+        setTimeout(() => tagline && tagline.classList.add('show'), 1900);
+        setTimeout(() => btn     && btn.classList.add('show'),     2500);
+        setTimeout(() => arrows  && arrows.classList.add('show'),  2700);
+    }
+
+    runHeroAnim();
+
+    window.addEventListener('load', function () {
+        const gif = document.getElementById('heroDiaperGif');
+        if (gif && gif.dataset.src) gif.src = gif.dataset.src;
+    });
+</script>
+<style>
+    .features-strip {
+        background: #f5eac3;
+        padding: 38px 45px 29px;
+    }
+
+    /* Desktop: single row, 5 items */
+    .features-inner {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        flex-wrap: nowrap;
+    }
+
+    .feat-item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+        text-align: left;
+        position: relative;
+        flex: 1;
+        justify-content: center;
+        padding: 6px 8px;
+    }
+
+    /* Vertical divider between items — desktop only */
+    .feat-item:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        right: 0; top: 50%;
+        transform: translateY(-50%);
+        height: 32px; width: 1.5px;
+        background: #b5c47a;
+    }
+
+    .feat-icon-wrap {
+        width: 34px; height: 34px;
+        background: transparent;
+        display: flex; align-items: center; justify-content: center;
+        font-size: 1.35rem; color: #6d7e2d; flex-shrink: 0;
+    }
+
+    .feat-label {
+        font-size: .76rem; font-weight: 700;
+        color: #6d7e2d; line-height: 1.3;
+    }
+
+    /* Mobile ≤ 767px: compact single row, same as desktop strip */
+    @media (max-width: 767px) {
+        .features-strip { padding: 10px 0; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+        .features-inner {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            width: max-content;
+            min-width: 100%;
+            padding: 0 8px;
+            gap: 0;
+        }
+        .feat-item {
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            padding: 6px 10px;
+            min-width: 80px;
+            flex: 0 0 auto;
+        }
+        .feat-item:not(:last-child)::after {
+            display: block;
+            height: 24px; width: 1.5px;
+            top: 50%; right: 0;
+            transform: translateY(-50%);
+        }
+        .feat-icon-wrap { font-size: 1.1rem; width: 28px; height: 28px; }
+        .feat-label { font-size: .58rem; }
+    }
+
+    @media (max-width: 420px) {
+        .feat-item { min-width: 70px; padding: 5px 7px; gap: 3px; }
+        .feat-icon-wrap { font-size: 1rem; width: 24px; height: 24px; }
+        .feat-label { font-size: .54rem; }
+    }
+</style>
+
+<section class="features-strip">
+    <div class="features-inner">
+
+        <div class="feat-item">
+            <div class="feat-icon-wrap"><i class="fas fa-cloud"></i></div>
+            <div class="feat-label">Cloud-Soft<br>Comfort</div>
+        </div>
+
+        <div class="feat-item">
+            <div class="feat-icon-wrap"><i class="fas fa-tint"></i></div>
+            <div class="feat-label">Up to 12hrs<br>Absorption</div>
+        </div>
+
+        <div class="feat-item">
+            <div class="feat-icon-wrap"><i class="fas fa-shield-alt"></i></div>
+            <div class="feat-label">Leakage<br>Protection</div>
+        </div>
+
+        <div class="feat-item">
+            <div class="feat-icon-wrap"><i class="fas fa-wind"></i></div>
+            <div class="feat-label">Breathable<br>&amp; Airy</div>
+        </div>
+
+        <div class="feat-item">
+            <div class="feat-icon-wrap"><i class="fas fa-leaf"></i></div>
+            <div class="feat-label">Eco Friendly<br>Materials</div>
+        </div>
+
+    </div>
+</section>
+﻿<section class="lumi-babies" aria-label="Why Babies Love Lumi">
+<style>
+
+    .lumi-babies{background:#fdf6e7;position:relative;padding:65px 0 0;overflow:hidden;font-family:'Nunito',sans-serif; margin-top:-2%;}
+    .lumi-babies-title{font-weight:900;font-size:24px;color:#607919;text-align:center;margin-top:-20px;margin-bottom:20px;display:flex;align-items:center;justify-content:center;gap:20px;letter-spacing:-.3px;}
+    .lumi-feature{display:flex;align-items:flex-start;gap:14px;margin-bottom:24px;}
+    .lumi-feature-icon{width:44px;height:44px;min-width:44px;background:#8aa74b;border-radius:50%;display:flex;align-items:center;justify-content:center;}
+    .lumi-feature-text h4{font-size:16px;font-weight:800;color:#3d5a1a;margin:0 0 4px;line-height:1.2;}
+    .lumi-feature-text p{font-size:14px;color:#6a7a50;margin:0;line-height:1.5;}
+    .lumi-feature-group{position:relative;}
+    .lumi-feature-gap{display:none;}
+    .lumi-feature-vdot{display:none;}
+    .lumi-left-col{padding-left:0;margin-left:-12px;}
+    .lumi-left-col .lumi-feature{flex-direction:row;}
+    .lumi-left-col .lumi-feature-text{text-align:left;flex:1;}
+    .lumi-left-col .lumi-feature-gap{justify-content:flex-end;padding-left:0;padding-right:18px;}
+    .lumi-left-col .lumi-feature-vdot{margin-left:0;margin-right:18px;}
+    .lumi-right-col .lumi-feature{flex-direction:row;align-items:flex-start;gap:14px;}
+    .lumi-right-col .lumi-feature-text{text-align:left;flex:1;}
+    .lumi-circle-wrap{display:flex;justify-content:center;align-items:flex-end;}
+    .lumi-baby-circle-outer{position:relative;width:240px;height:240px;margin:0 auto;}
+    .lumi-baby-circle{position:absolute;bottom:60px;left:55%;transform:translateX(-50%);width:190px;height:190px;border-radius:50%;background-color:#e0d89d;}
+    .lumi-baby-front{position:absolute;bottom:0;;left:50%;transform:translateX(-50%);height:310px;width:auto;object-fit:contain;z-index:;}
+    .lumi-mascot img{max-height:200px;width:auto;display:block;margin:0 auto;mix-blend-mode:multiply;transform:translate(-60px,-20px);}
+    .lumi-sleeping img{max-height:160px;width:auto;display:block;margin:0 auto;mix-blend-mode:multiply;transform:translate(-70px,-50px);}
+    .lumi-deco{position:absolute;inset:0;pointer-events:none;z-index:1;overflow:hidden;}
+    .lumi-deco svg{position:absolute;opacity:0.3;}
+    .lumi-babies-wave{position:absolute;left:0;right:0;line-height:0;pointer-events:none;z-index:1;}
+    .lumi-babies-wave-top{top:0;}
+    .lumi-babies-wave-bottom{bottom:0;}
+    .lumi-babies-wave svg{display:block;width:100%;}
+    .lumi-babies-inner{position:relative;z-index:2;}
+    /* ── TABLET + MOBILE (≤991px): hide side decorations, fix margins ── */
+    @media(max-width:991.98px){
+        .lumi-babies-title{font-size:18px;gap:8px;}
+        .lumi-babies{padding:56px 0 60px;} /* 56px clears the 44px top wave */
+        .lumi-mascot-col,.lumi-sleeping-col{display:none;}
+        .lumi-left-col{margin-left:0;}
+        .lumi-baby-circle-outer{width:200px;height:230px;}
+        .lumi-baby-circle{width:190px;height:190px;}
+        .lumi-baby-front{height:250px;}
+    }
+    /* ── TABLET (576px–991px): baby circle top full-width, features side-by-side below ── */
+    @media(min-width:576px) and (max-width:991.98px){
+        .lumi-center-col{order:-1;flex:0 0 100%;max-width:100%;margin-bottom:10px;}
+        .lumi-left-col,.lumi-right-col{flex:0 0 50%;max-width:50%;}
+    }
+    /* ── SMALL MOBILE (≤575px): baby TOP-CENTER, features single column ── */
+    @media(max-width:575px){
+        .lumi-babies{padding:60px 0 40px;}
+        .lumi-babies-title{font-size:14px;gap:4px;flex-wrap:wrap;justify-content:center;margin-bottom:10px;line-height:1.4;}
+        .lumi-babies-inner .row{
+            display:flex;
+            flex-direction:column;
+            margin:0;
+            padding:0 20px;
+            gap:0;
+        }
+        /* Baby circle — top center full width */
+        .lumi-center-col{order:-1;display:flex;justify-content:center;margin-bottom:20px;padding:0;width:100%;max-width:none;flex:none;}
+        /* Features — single column full width */
+        .lumi-left-col,.lumi-right-col{width:100%;max-width:none;flex:none;padding:0;margin:0;}
+        /* Circle & baby sizes */
+        .lumi-baby-circle-outer{width:200px;height:240px;}
+        .lumi-baby-circle{width:185px;height:185px;bottom:52px;}
+        .lumi-baby-front{height:240px;}
+        /* Feature alignment */
+        .lumi-left-col .lumi-feature,
+        .lumi-right-col .lumi-feature{flex-direction:row;align-items:center;gap:14px;margin-bottom:12px;}
+        .lumi-left-col .lumi-feature-text,
+        .lumi-right-col .lumi-feature-text{text-align:left;flex:1;min-width:0;}
+        .lumi-feature-icon{width:38px;height:38px;min-width:38px;flex-shrink:0;}
+        .lumi-feature-icon svg{width:17px;height:17px;}
+        .lumi-feature-text h4{font-size:13px;margin-bottom:2px;line-height:1.2;}
+        .lumi-feature-text p{font-size:12px;line-height:1.45;color:#6a7a50;}
+    }
+</style>
+
+<!-- Decorative floating background icons -->
+<div class="lumi-deco" aria-hidden="true">
+    <!-- Star top-left -->
+    <svg style="top:8%;left:2%;width:38px;height:38px;" viewBox="0 0 24 24" fill="none" stroke="#8aa74b" stroke-width="1.4" stroke-linejoin="round">
+        <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon>
+    </svg>
+    <!-- Leaf left-center -->
+    <svg style="top:45%;left:1%;width:44px;height:44px;" viewBox="0 0 24 24" fill="none" stroke="#8aa74b" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"></path>
+        <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+    </svg>
+    <!-- Small leaf bottom-left -->
+    <svg style="bottom:14%;left:6%;width:32px;height:32px;" viewBox="0 0 24 24" fill="none" stroke="#8aa74b" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"></path>
+        <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+    </svg>
+    <!-- Star top-right -->
+    <svg style="top:7%;right:2%;width:34px;height:34px;" viewBox="0 0 24 24" fill="none" stroke="#8aa74b" stroke-width="1.4" stroke-linejoin="round">
+        <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon>
+    </svg>
+ <!-- Leaf left-center -->
+    <svg style="top:45%;left:1%;width:44px;height:44px;" viewBox="0 0 24 24" fill="none" stroke="#8aa74b" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"></path>
+        <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+    </svg>
+    <!-- Small star bottom-right -->
+    <svg style="bottom:16%;right:5%;width:28px;height:28px;" viewBox="0 0 24 24" fill="none" stroke="#8aa74b" stroke-width="1.4" stroke-linejoin="round">
+        <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon>
+    </svg>
+</div>
+
+<!-- Top: 2 wide wave lines, each with only 2 bends (gentle S-curve) -->
+<div style="position:absolute;top:0;left:0;right:0;height:44px;z-index:5;line-height:0;pointer-events:none;" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 44" preserveAspectRatio="none" width="100%" height="44">
+        <!-- Fill area above wave with features strip color — merges seamlessly -->
+        <path d="M0,22 C240,6 480,6 720,22 C960,38 1200,38 1440,22 L1440,0 L0,0 Z" fill="#f5eac3"></path>
+        <!-- Single wave line — 2 bends: curves up then down -->
+        <path d="M0,22 C240,6 480,6 720,22 C960,38 1200,38 1440,22" fill="none" stroke="#8aa74b" stroke-width="3" stroke-linecap="round"></path>
+    </svg>
+</div>
+
+<div class="lumi-babies-inner container-xl px-4">
+
+    <!-- Title -->
+    <h2 class="lumi-babies-title">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="#8aa74b"><path d="M17 8C8 10 5.9 16.17 3.82 19.41L5.71 20l1-2.3A4.49 4.49 0 008 18c7 0 10-7.5 9-10z"></path><path d="M10.66 6.56c-.16-.6-.58-1.06-1.16-1.24a2 2 0 00-2.5 1.95c0 1.1.9 2 2 2a2 2 0 001.95-2.5c-.05-.07-.16-.14-.29-.21z" opacity=".4"></path></svg>
+         A Mother's Comfort, In Every Diaper
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="#8aa74b" style="transform:scaleX(-1)"><path d="M17 8C8 10 5.9 16.17 3.82 19.41L5.71 20l1-2.3A4.49 4.49 0 008 18c7 0 10-7.5 9-10z"></path><path d="M10.66 6.56c-.16-.6-.58-1.06-1.16-1.24a2 2 0 00-2.5 1.95c0 1.1.9 2 2 2a2 2 0 001.95-2.5c-.05-.07-.16-.14-.29-.21z" opacity=".4"></path></svg>
+    </h2>
+
+    <div class="row align-items-center g-4">
+
+        <!-- Col 1: Lumi mascot -->
+        <div class="col-lg-1 text-center lumi-mascot-col">
+            <div class="lumi-mascot"><img src="./index_files/image-2.webp" alt="Lumi mascot"></div>
+        </div>
+
+        <!-- Col 2: Left features -->
+        <div class="col-lg-3 lumi-feature-group lumi-left-col">
+            <div class="lumi-feature">
+                <div class="lumi-feature-icon"><svg width="20" height="20" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z"></path></svg></div>
+                <div class="lumi-feature-text"><h4>Cloud Soft</h4><p>Feels like a gentle cuddle.</p></div>
+            </div>
+            <div class="lumi-feature-gap"><span class="lumi-feature-vdot"></span></div>
+            <div class="lumi-feature">
+                <div class="lumi-feature-icon"><svg width="20" height="20" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"></path></svg></div>
+                <div class="lumi-feature-text"><h4>Quick Absorption</h4><p>Locks wetness away in seconds.</p></div>
+            </div>
+            <div class="lumi-feature-gap"><span class="lumi-feature-vdot"></span></div>
+            <div class="lumi-feature">
+                <div class="lumi-feature-icon"><svg width="20" height="20" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><line x1="12" y1="8" x2="12" y2="12"></line><circle cx="12" cy="16" r=".5" fill="#fff"></circle></svg></div>
+                <div class="lumi-feature-text"><h4>Overnight Comfort</h4><p>Comfort that lasts till morning.</p></div>
+            </div>
+        </div>
+
+        <!-- Col 3: Center — image-5 rises above green circle -->
+        <div class="col-lg-4 text-center lumi-center-col">
+            <div class="lumi-circle-wrap">
+                <div class="lumi-baby-circle-outer">
+                    <div class="lumi-baby-circle"></div>
+                    <img src="./index_files/image-5.webp" alt="Baby" class="lumi-baby-front">
+                </div>
+            </div>
+        </div>
+
+        <!-- Col 4: Right features -->
+        <div class="col-lg-3 lumi-feature-group lumi-right-col">
+            <div class="lumi-feature">
+                <div class="lumi-feature-icon"><svg width="20" height="20" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M9.59 4.59A2 2 0 1111 8H2m10.59 11.41A2 2 0 1014 16H2m15.73-8.27A2.5 2.5 0 1119.5 12H2"></path></svg></div>
+                <div class="lumi-feature-text"><h4>Snug and Secure Fit</h4><p>Stays comfortably in place.</p></div>
+            </div>
+            <div class="lumi-feature-gap"><span class="lumi-feature-vdot"></span></div>
+            <div class="lumi-feature">
+                <div class="lumi-feature-icon"><svg width="20" height="20" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg></div>
+                <div class="lumi-feature-text"><h4>Breathable Design</h4><p>Keeps baby skin fresh and protected.</p></div>
+            </div>
+            <div class="lumi-feature-gap"><span class="lumi-feature-vdot"></span></div>
+            <div class="lumi-feature">
+                <div class="lumi-feature-icon"><svg width="20" height="20" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path></svg></div>
+                <div class="lumi-feature-text"><h4>Flexible Fit</h4><p>Moves with every kick and crawl.</p></div>
+            </div>
+        </div>
+
+        <!-- Col 5: Sleeping baby -->
+        <div class="col-lg-1 text-center lumi-feature-group lumi-sleeping-col">
+<div class="lumi-sleeping"><img src="./index_files/image-1.webp" alt="Sleeping Baby"></div>
+        </div>
+
+    </div>
+</div>
+
+
+</section>
+
+
+
+<section class="comfort-section" aria-label="Ultra Soft Comfort">
+<style>
+    /* ── BASE (Laptop 992px+) ── */
+    .comfort-section{position:relative;background:#f5eac3;color:#3d5a1a;overflow:hidden;width:100%;padding:120px 80px 80px;font-family:'Nunito',sans-serif;margin-top:-4px;}
+    .comfort-top-wave{position:absolute;top:0;left:0;width:100%;height:110px;z-index:2;pointer-events:none;}
+    .comfort-top-wave svg{width:100%;height:100%;display:block;}
+    .comfort-bottom-wave{position:absolute;bottom:0;left:0;width:100%;height:500px;z-index:2;pointer-events:none;}
+    .comfort-bottom-wave svg{width:100%;height:100%;display:block;}
+    .comfort-inner{position:relative;z-index:5;}
+    .comfort-baby-abs{position:absolute;top:5px;right:-1%;width:230px;z-index:2;}
+    .comfort-baby-img{width:170%;margin-left:-155%;margin-top:-13%;display:block;}
+    .comfort-heading{font-family:'Nunito',sans-serif;font-size:60px;font-weight:800;line-height:.95;color:#6d7e2d;margin-bottom:1.5%;margin-left:5%;}
+    .comfort-desc{max-width:560px;font-size:18px;font-family:'Nunito',sans-serif;color:#6d7e2d;line-height:1.5;margin-bottom:4.5%;padding-bottom:1.5%;margin-left:5%;}
+    .comfort-cards-row{display:flex;justify-content:center;align-items:stretch;gap:20px;flex-wrap:nowrap;margin-bottom:0;margin-top:-39px;position:relative;z-index:5;}
+    .comfort-card{width:280px;height:220px;background:#fdf6e7;border-radius:24px;overflow:hidden;display:flex;border:1.5px solid #8AA74B;box-shadow:0 6px 18px rgba(0,0,0,.08);transition:transform .3s ease,box-shadow .3s ease;}
+    .comfort-card:hover{transform:translateY(-5px);box-shadow:0 12px 32px rgba(255,255,255,0.85),0 4px 14px rgba(0,0,0,0.1);}
+    .comfort-card-photo{width:44%;position:relative;display:flex;justify-content:center;align-items:flex-end;overflow:hidden;}
+    .comfort-card-img{width:120%;height:100%;object-fit:cover;object-position:center bottom;}
+    .comfort-card-content{width:56%;padding:18px 18px 20px;}
+    .comfort-card-icon{width:52px;height:52px;background:#819b44;border-radius:50%;color:#fff;display:flex;justify-content:center;align-items:center;margin-left:auto;margin-bottom:12px;}
+    .comfort-card-title{font-size:16px;font-weight:700;color:#244019;line-height:1.4;}
+    .comfort-card-divider{width:55px;height:4px;border-radius:30px;background:#7fa54e;margin:10px 0;}
+    .comfort-card-desc{font-size:14px;line-height:1.6;color:#777;}
+
+    /* ── TABLET 768px – 1199px: 2×2 grid ── */
+    @media(max-width:1199px){
+        .comfort-section{padding:100px 40px 80px;min-height:auto;}
+        .comfort-baby-abs{width:180px;}
+        .comfort-heading{font-size:48px;}
+        .comfort-cards-row{flex-wrap:wrap;margin-top:20px;gap:16px;}
+        .comfort-card{width:calc(50% - 8px);height:auto;min-height:190px;}
+    }
+
+    /* ── MOBILE 576px – 991px ── */
+    @media(max-width:991px){
+        .comfort-section{padding:70px 20px 60px;min-height:auto;}
+        /* pull baby image into flow, centered above heading */
+        .comfort-baby-abs{position:relative;top:auto;right:auto;width:110px;margin:0 auto 14px;display:block;}
+        .comfort-baby-img{width:100%;margin-left:0;margin-top:0;}
+        .comfort-heading{font-size:36px;margin-left:0;text-align:center;margin-bottom:10px;}
+        .comfort-desc{margin-left:0;text-align:center;max-width:100%;font-size:15px;margin-bottom:20px;padding-bottom:0;}
+        .comfort-cards-row{flex-wrap:wrap;margin-top:0;gap:14px;}
+        .comfort-card{width:calc(50% - 7px);height:auto;min-height:160px;}
+    }
+
+    /* ── SMALL MOBILE <576px: 2-column vertical cards ── */
+    @media(max-width:575px){
+        .comfort-section{padding:56px 14px 40px;}
+        .comfort-baby-abs{width:70px;margin-bottom:8px;}
+        .comfort-heading{font-size:26px;text-align:center;margin-left:0;margin-bottom:8px;}
+        .comfort-desc{font-size:12.5px;text-align:center;margin-left:0;margin-bottom:18px;padding-bottom:0;}
+        .comfort-desc br{display:none;}
+        .comfort-cards-row{gap:10px;margin-top:0;}
+        /* Single column full-width cards */
+        .comfort-card{width:100%;flex-direction:row;height:auto;min-height:130px;border-radius:18px;}
+        .comfort-card-photo{width:38%;height:auto;min-height:130px;}
+        .comfort-card-img{width:120%;object-position:center bottom;}
+        .comfort-card-content{width:62%;padding:14px 14px 16px;}
+        .comfort-card-icon{width:38px;height:38px;font-size:14px;margin-left:0;margin-bottom:10px;}
+        .comfort-card-title{font-size:13.5px;font-weight:700;line-height:1.3;}
+        .comfort-card-divider{width:40px;height:3px;margin:7px 0;}
+        .comfort-card-desc{font-size:12px;line-height:1.5;}
+    }
+</style>
+
+<!-- TOP CURVE — fills above the wave with the previous section color to properly cut the section -->
+<div class="comfort-top-wave">
+    <svg viewBox="0 -10 1440 120" preserveAspectRatio="none">
+        <path d="M0,-10 L1440,-10 L1440,28 C1440,28 1400,36 1360,30 C1220,8 1080,-5 900,18 C760,40 620,42 460,25 C320,10 180,5 0,35 Z" fill="#fdf6e7"></path>
+        <path d="M0,35 C180,5 320,10 460,25 C620,42 760,40 900,18 C1080,-5 1220,8 1360,30 C1400,36 1440,28 1440,28" fill="none" stroke="#beaf81" stroke-width="2.4" stroke-linecap="round"></path>
+    </svg>
+</div>
+
+<!-- BABY IMAGE -->
+<div class="comfort-baby-abs">
+    <img src="./index_files/baby-dark.webp" class="comfort-baby-img" alt="">
+</div>
+
+<div class="comfort-inner">
+
+    <h2 class="comfort-heading">
+        Ultra Soft<br>
+        Comfort
+    </h2>
+
+    <p class="comfort-desc">
+        From playful mornings to peaceful nights,<br>ensuring dryness, freedom of movement, and lasting comfort.
+    </p>
+
+    <div class="comfort-cards-row">
+
+        <!-- CARD 1 -->
+        <div class="comfort-card">
+            <div class="comfort-card-photo" style="background:#fdf6e7;">
+                <img src="./index_files/split_baby_1.webp" class="comfort-card-img">
+            </div>
+            <div class="comfort-card-content">
+                <div class="comfort-card-icon"><i class="fas fa-leaf"></i></div>
+                <div class="comfort-card-title">Ultra Soft Comfort</div>
+                <div class="comfort-card-divider"></div>
+                <div class="comfort-card-desc">Cloud-soft feel for delicate baby skin.</div>
+            </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="comfort-card">
+            <div class="comfort-card-photo" style="background:#fdf6e7;">
+                <img src="./index_files/split_baby_2.webp" class="comfort-card-img">
+            </div>
+            <div class="comfort-card-content">
+                <div class="comfort-card-icon"><i class="fas fa-shield-alt"></i></div>
+                <div class="comfort-card-title">Leakage Protection</div>
+                <div class="comfort-card-divider"></div>
+                <div class="comfort-card-desc">Up to 12 hours of dryness.</div>
+            </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="comfort-card">
+            <div class="comfort-card-photo" style="background:#fdf6e7;">
+                <img src="./index_files/split_baby_3.webp" class="comfort-card-img" style="object-position:center 100%;transform:translateY(30px);">
+            </div>
+            <div class="comfort-card-content">
+                <div class="comfort-card-icon"><i class="fas fa-heart"></i></div>
+                <div class="comfort-card-title">Gentle &amp; Safe</div>
+                <div class="comfort-card-divider"></div>
+                <div class="comfort-card-desc">Made with skin-friendly materials.</div>
+            </div>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="comfort-card">
+            <div class="comfort-card-photo" style="background:#fdf6e7;">
+                <img src="./index_files/split_baby_4.webp" class="comfort-card-img" style="object-position:left bottom;">
+            </div>
+            <div class="comfort-card-content">
+                <div class="comfort-card-icon"><i class="fas fa-recycle"></i></div>
+                <div class="comfort-card-title">Eco Conscious</div>
+                <div class="comfort-card-divider"></div>
+                <div class="comfort-card-desc">Thoughtful for babies and the planet.</div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- BOTTOM CURVE (hidden — prevents white gap) -->
+<div class="comfort-bottom-wave">
+    <svg viewBox="0 0 1440 260" preserveAspectRatio="none">
+        <path d="M0,180 C170,240 300,190 500,180 C780,185 980,120 1180,125 C1320,130 1390,150 1440,165 L1440,260 L0,260 Z" fill="#fdf6e7" stroke="none"></path>
+        <path d="M0,180 C170,240 300,190 500,180 C780,185 980,120 1180,125 C1320,130 1390,150 1440,165" fill="none" stroke="#beaf81" stroke-width="1.5" stroke-linecap="round"></path>
+    </svg>
+</div>
+
+</section>
+<style>
+/* ============================================================
+   PRODUCT SECTION
+============================================================ */
+.product-section {
+    background: #f5f0dc;
+    padding: 4rem 0 5rem;
+    text-align: center;
+}
+.product-section-label {
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: #6d7e2d;
+    margin-bottom: 0.6rem;
+}
+.product-section-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #2e3d12;
+    margin-bottom: 0.4rem;
+}
+.product-section-sub {
+    font-size: 0.95rem;
+    color: #7a8c45;
+    font-weight: 600;
+    margin-bottom: 3.5rem;
+}
+
+/* ── Slider wrapper ── */
+.product-slider-wrap {
+    position: relative;
+    max-width: 1060px;
+    margin: 0 auto;
+    padding: 0 64px;
+}
+
+/* Clips left/right ghost slides but keeps bottom open for image pop */
+.product-swiper-outer {
+    clip-path: inset(-290px 0 -100px 0);
+    overflow: visible;
+}
+
+.product-swiper {
+    overflow: visible !important;
+    padding-bottom: 70px !important;
+}
+
+/* Each slide: flex center */
+.product-swiper .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-bottom: 0;
+}
+
+/* ── Arrow buttons ── */
+.prod-arrow {
+    position: absolute;
+    top: 38%;
+    transform: translateY(-50%);
+    z-index: 20;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #2e3d12;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f5f0dc;
+    box-shadow: 0 4px 16px rgba(46,61,18,0.3);
+    transition: background 0.18s, transform 0.18s;
+    flex-shrink: 0;
+}
+.prod-arrow:hover {
+    background: #6d7e2d;
+    transform: translateY(-50%) scale(1.1);
+}
+.prod-prev { left: 8px; }
+.prod-next { right: 8px; }
+
+/* ============================================================
+   CARD
+============================================================ */
+.pc-wrap {
+    position: relative;
+    width: 100%;
+    max-width: 235px;
+    cursor: pointer;
+    padding-bottom: 50px;
+}
+
+/* Outer shell — always #f5eac3 for all cards */
+.pc-shell {
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 330px;
+    background: rgba(30,58,30,0.25);
+    padding: 2.5px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Inner rectangle — white for side cards */
+.pc-inner {
+    border-radius: 14px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background: #ffffff;
+}
+
+/* Center (active) card — inner = dark green */
+.product-swiper .swiper-slide-active .pc-shell {
+    background:#6d7e2d;
+    box-shadow: 0 8px 32px rgba(30,58,30,0.25);
+}
+.product-swiper .swiper-slide-active .pc-inner {
+    background:#6d7e2d;
+}
+
+/* Spacer inside shell — holds the image area height */
+.pc-img-space {
+    height: 175px;
+    flex-shrink: 0;
+}
+
+/* ── Floating image — lives OUTSIDE shell, free to overflow ── */
+.pc-img-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    pointer-events: none;
+    transition: transform 0.15s ease-out;
+}
+.pc-img-layer img {
+    width: 78%;
+    max-width: 175px;
+    height: 188px;
+    object-fit: contain;
+    display: block;
+    filter: drop-shadow(0 8px 20px rgba(0,0,0,0.18));
+    transition: transform 0.15s ease-out;
+}
+
+/* Price badge — only on active card */
+.pc-price-badge {
+    position: absolute;
+    top: 0.9rem;
+    right: 1rem;
+    font-size: 0.78rem;
+    font-weight: 800;
+    color: #fdf6e7;
+    background: rgba(253,246,231,0.14);
+    border: 1px solid rgba(253,246,231,0.3);
+    padding: 0.2rem 0.6rem;
+    border-radius: 20px;
+    pointer-events: auto;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+.product-swiper .swiper-slide-active .pc-price-badge {
+    opacity: 1;
+}
+
+/* ── Body text ── */
+.pc-body {
+    flex: 1;
+    padding: 0 1.2rem 1.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    text-align: left;
+    justify-content: space-between;
+}
+.pc-body-top {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+.pc-delivery {
+    font-size: 0.61rem;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    padding-top: 0.5rem;
+    border-top: 1px solid #e8e0c8;
+    color: #6d7e2d;
+    transition: color 0.25s, border-color 0.25s;
+}
+.product-swiper .swiper-slide-active .pc-delivery {
+    color: rgba(253,246,231,0.4);
+    border-color: rgba(231, 253, 235, 0.85);
+}
+.pc-name-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.4rem;
+}
+.pc-name {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #6d7e2d;
+    transition: color 0.25s;
+}
+.product-swiper .swiper-slide-active .pc-name { color: #fdf6e7; }
+
+.pc-order {
+    font-size: 0.68rem;
+    font-weight: 800;
+    white-space: nowrap;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    flex-shrink: 0;
+    color: #6d7e2d;
+    transition: color 0.25s;
+}
+.product-swiper .swiper-slide-active .pc-order { color: #fdf6e7; }
+
+.pc-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.28rem;
+}
+.pc-tag {
+    font-size: 0.59rem;
+    font-weight: 700;
+    padding: 0.18rem 0.5rem;
+    border-radius: 20px;
+    background: #eeeade;
+    color: #6d7e2d;
+    transition: background 0.25s, color 0.25s;
+}
+.product-swiper .swiper-slide-active .pc-tag {
+    background: rgba(253,246,231,0.1);
+    color: rgba(253,246,231,0.75);
+    border: 1px solid rgba(253,246,231,0.18);
+}
+
+/* ============================================================
+   HOVER — card squishes to square, image floats above
+============================================================ */
+.pc-shell {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.pc-img-layer {
+    transition: transform 0.25s ease;
+}
+.pc-img-layer img {
+    transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.pc-wrap:hover .pc-shell {
+    transform: scaleY(0.80) translateY(42px);
+    transform-origin: top center;
+    box-shadow: 0 16px 44px rgba(0,0,0,0.13);
+}
+.product-swiper .swiper-slide-active .pc-wrap:hover .pc-shell {
+    box-shadow: 0 20px 52px rgba(30,58,30,0.45);
+}
+
+.pc-wrap:hover .pc-img-layer {
+    transform: translateY(-57px);
+}
+.pc-wrap:hover .pc-img-layer img {
+    transform: scale(1.07);
+    filter: drop-shadow(0 14px 28px rgba(0,0,0,0.28));
+}
+
+/* ── Hover message overlay — center card only ── */
+.pc-hover-msg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 175px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 18px;
+    z-index: 5;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.22s ease, transform 0.22s ease;
+}
+.pc-hover-msg span {
+    display: block;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #1e3a1e;
+    line-height: 1.35;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+/* Center card — cream text */
+.product-swiper .swiper-slide-active .pc-hover-msg span {
+    color: #f5eac3;
+}
+/* Show on all cards hover */
+.pc-wrap:hover .pc-hover-msg {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+    .product-slider-wrap { padding: 0 52px; }
+    .pc-shell { min-height: 300px; }
+    .pc-img-space { height: 155px; }
+    .pc-img-layer { height: 168px; }
+    .pc-img-layer img { height: 148px; }
+}
+@media (max-width: 640px) {
+    .product-slider-wrap { padding: 0 44px; }
+    .product-section { padding: 2.5rem 0 4rem; }
+    .pc-shell { min-height: 280px; }
+}
+</style>
+
+<!-- ================================================================
+     PRODUCT SECTION
+================================================================ -->
+<section class="product-section" id="products">
+
+    <p class="product-section-label">Our Collection</p>
+    <h2 class="product-section-title">Crafted for little ones</h2>
+    <p class="product-section-sub">Gentle on skin. Strong where it matters.</p>
+
+    <div class="product-slider-wrap">
+
+        
+        <button class="prod-arrow prod-prev" id="prodPrev" aria-label="Previous slide" tabindex="0" aria-controls="swiper-wrapper-34fd8644ee509a69">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+        </button>
+
+        <div class="product-swiper-outer">
+            <div class="swiper product-swiper swiper-initialized swiper-horizontal swiper-backface-hidden" id="productSwiper">
+                <div class="swiper-wrapper" id="swiper-wrapper-34fd8644ee509a69" aria-live="polite" style="transition-duration: 0ms; transition-delay: 0ms; transform: translate3d(-636px, 0px, 0px);"><div class="swiper-slide" role="group" aria-label="3 / 5" data-swiper-slide-index="2" style="width: 296px; margin-right: 22px;">
+                        <div class="pc-wrap">
+                            <div class="pc-shell">
+                                <div class="pc-inner">
+                                    <div class="pc-hover-msg">
+                                        <span>Happy Day</span>
+                                        <span>Every Day</span>
+                                    </div>
+                                    <div class="pc-img-space"></div>
+                                    <div class="pc-body">
+                                        <div class="pc-body-top">
+                                            <p class="pc-delivery">Free delivery until 30/06/2026</p>
+                                            <div class="pc-name-row">
+                                                <span class="pc-name">Medium (M)</span>
+                                                <a href="http://127.0.0.1:8000/header#" class="pc-order">Order ↗</a>
+                                            </div>
+                                        </div>
+                                        <div class="pc-tags">
+                                            <span class="pc-tag">6–11 kg</span>
+                                            <span class="pc-tag">32 pcs</span>
+                                            <span class="pc-tag">360° Fit</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pc-img-layer">
+                                <span class="pc-price-badge">₹ 499</span>
+                                <img src="./index_files/lumi5.webp" alt="Lumi9 M">
+                            </div>
+                        </div>
+                    </div><div class="swiper-slide" role="group" aria-label="4 / 5" data-swiper-slide-index="3" style="width: 296px; margin-right: 22px;">
+                        <div class="pc-wrap">
+                            <div class="pc-shell">
+                                <div class="pc-inner">
+                                    <div class="pc-hover-msg">
+                                        <span>Happy Day</span>
+                                        <span>Every Day</span>
+                                    </div>
+                                    <div class="pc-img-space"></div>
+                                    <div class="pc-body">
+                                        <div class="pc-body-top">
+                                            <p class="pc-delivery">Free delivery until 30/06/2026</p>
+                                            <div class="pc-name-row">
+                                                <span class="pc-name">Large (L)</span>
+                                                <a href="http://127.0.0.1:8000/header#" class="pc-order">Order ↗</a>
+                                            </div>
+                                        </div>
+                                        <div class="pc-tags">
+                                            <span class="pc-tag">9–14 kg</span>
+                                            <span class="pc-tag">28 pcs</span>
+                                            <span class="pc-tag">Night Dry</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pc-img-layer">
+                                <img src="./index_files/lumi9(L).webp" alt="Lumi9 L">
+                            </div>
+                        </div>
+                    </div><div class="swiper-slide swiper-slide-prev" role="group" aria-label="5 / 5" data-swiper-slide-index="4" style="width: 296px; margin-right: 22px;">
+                        <div class="pc-wrap">
+                            <div class="pc-shell">
+                                <div class="pc-inner">
+                                    <div class="pc-hover-msg">
+                                        <span>Happy Day</span>
+                                        <span>Every Day</span>
+                                    </div>
+                                    <div class="pc-img-space"></div>
+                                    <div class="pc-body">
+                                        <div class="pc-body-top">
+                                            <p class="pc-delivery">Free delivery until 30/06/2026</p>
+                                            <div class="pc-name-row">
+                                                <span class="pc-name">Extra Large (XL)</span>
+                                                <a href="http://127.0.0.1:8000/header#" class="pc-order">Order ↗</a>
+                                            </div>
+                                        </div>
+                                        <div class="pc-tags">
+                                            <span class="pc-tag">12–17 kg</span>
+                                            <span class="pc-tag">24 pcs</span>
+                                            <span class="pc-tag">Active Fit</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pc-img-layer">
+                                <img src="./index_files/lumi6.webp" alt="Lumi9 XL">
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="swiper-slide swiper-slide-active" role="group" aria-label="1 / 5" data-swiper-slide-index="0" style="width: 296px; margin-right: 22px;">
+                        <div class="pc-wrap">
+                            <div class="pc-shell">
+                                <div class="pc-inner">
+                                    <div class="pc-hover-msg">
+                                        <span>Happy Day</span>
+                                        <span>Every Day</span>
+                                    </div>
+                                    <div class="pc-img-space"></div>
+                                    <div class="pc-body">
+                                        <div class="pc-body-top">
+                                            <p class="pc-delivery">Free delivery until 30/06/2026</p>
+                                            <div class="pc-name-row">
+                                                <span class="pc-name">Newborn (NB)</span>
+                                                <a href="http://127.0.0.1:8000/header#" class="pc-order">Order ↗</a>
+                                            </div>
+                                        </div>
+                                        <div class="pc-tags">
+                                            <span class="pc-tag">0–5 kg</span>
+                                            <span class="pc-tag">24 pcs</span>
+                                            <span class="pc-tag">Ultra Soft</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pc-img-layer">
+                                <img src="./index_files/lumi4.webp" alt="Lumi9 NB">
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="swiper-slide swiper-slide-next" role="group" aria-label="2 / 5" data-swiper-slide-index="1" style="width: 296px; margin-right: 22px;">
+                        <div class="pc-wrap">
+                            <div class="pc-shell">
+                                <div class="pc-inner">
+                                    <div class="pc-hover-msg">
+                                        <span>Happy Day</span>
+                                        <span>Every Day</span>
+                                    </div>
+                                    <div class="pc-img-space"></div>
+                                    <div class="pc-body">
+                                        <div class="pc-body-top">
+                                            <p class="pc-delivery">Free delivery until 30/06/2026</p>
+                                            <div class="pc-name-row">
+                                                <span class="pc-name">Small (S)</span>
+                                                <a href="http://127.0.0.1:8000/header#" class="pc-order">Order ↗</a>
+                                            </div>
+                                        </div>
+                                        <div class="pc-tags">
+                                            <span class="pc-tag">3–8 kg</span>
+                                            <span class="pc-tag">36 pcs</span>
+                                            <span class="pc-tag">Leak Guard</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pc-img-layer">
+                                <img src="./index_files/lumi7.webp" alt="Lumi9 S">
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    
+
+                    
+                    
+
+                    
+                    
+
+                </div>
+            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+        </div>
+
+        
+        <button class="prod-arrow prod-next" id="prodNext" aria-label="Next slide" tabindex="0" aria-controls="swiper-wrapper-34fd8644ee509a69">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+        </button>
+
+    </div>
+
+</section>
+
+<script>
+window.addEventListener('load', function () {
+    new Swiper('#productSwiper', {
+        slidesPerView: 3,
+        centeredSlides: true,
+        spaceBetween: 22,
+        loop: true,
+        speed: 420,
+        navigation: {
+            nextEl: '#prodNext',
+            prevEl: '#prodPrev',
+        },
+        breakpoints: {
+            0:   { slidesPerView: 1, spaceBetween: 16 },
+            640: { slidesPerView: 2, spaceBetween: 18 },
+            900: { slidesPerView: 3, spaceBetween: 22 },
+        }
+    });
+});
+</script>
+﻿<section class="lumi-parents" aria-label="Loved by Parents">
+<style>
+    .lumi-parents{background:#f5eac3;padding:65px 0 60px;font-family:'Nunito',sans-serif;position:relative;overflow:hidden;margin-top:-60px;}
+    .lumi-parents-top-wave{position:absolute;top:0;left:0;width:100%;height:100px;z-index:2;pointer-events:none;}
+    .lumi-parents-top-wave svg{width:100%;height:100%;display:block;}
+    .lumi-parents-header{position:relative;z-index:10;margin-bottom:-22px;padding-bottom:10px;text-align:center;display:flex;flex-direction:column;align-items:center;background:#f5eac3;width:fit-content;margin-left:auto;margin-right:auto;padding-left:32px;padding-right:32px;}
+    .lumi-parents-title{font-weight:900;font-size:28px;color:#607919;text-align:center;margin-bottom:4px;display:inline-flex;align-items:center;justify-content:center;gap:10px;letter-spacing:-.3px;background:#f5eac3;padding:0 20px;}
+    .lumi-parents-sub{text-align:center;font-size:14px;color:#7a8a60;margin-bottom:0;display:inline-block;background:#f5eac3;padding:0 14px;}
+    .lumi-mq-area{position:relative;margin:0 50px;padding:26px 0 22px;border:1.5px dashed #8aa74b;border-radius:40px;background:#f5eac3;isolation:isolate;}
+    .lumi-baby-img{position:absolute;top:-80px;right:80px;width:155px;z-index:6;pointer-events:none;filter:drop-shadow(0 4px 12px rgba(96,121,25,0.12));}
+    .lumi-flower-dot{position:absolute;left:0px;top:-18px;width:36px;z-index:6;pointer-events:none;}
+    .lumi-mq-row{overflow:hidden;padding:6px 0;}
+    .lumi-mq-row+.lumi-mq-row{margin-top:14px;}
+    .lumi-mq-track{display:flex;gap:14px;width:max-content;}
+    @keyframes lumi-mq-left{to{transform:translateX(-50%);}}
+    @keyframes lumi-mq-right{from{transform:translateX(-50%);}to{transform:translateX(0);}}
+    .lumi-mq-row-1 .lumi-mq-track{animation:lumi-mq-left 40s linear infinite;}
+    .lumi-mq-row-2 .lumi-mq-track{animation:lumi-mq-right 44s linear infinite;}
+    .lumi-mq-row:hover .lumi-mq-track{animation-play-state:paused;}
+    .lumi-rev-card{width:360px;flex-shrink:0;background:#fdf6e7;border:1.5px solid #8aa74b;border-radius:16px;padding:12px 18px;display:flex;flex-direction:column;gap:8px;box-shadow:0 2px 10px rgba(138,167,75,0.15);min-height:110px;}
+    .lumi-rv-top{display:flex;align-items:center;gap:12px;}
+    .lumi-rv-av{width:52px;height:52px;min-width:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:19px;color:#fff;flex-shrink:0;}
+    .lumi-rv-stars{color:#8aa74b;font-size:14px;line-height:1;margin-bottom:3px;letter-spacing:1px;}
+    .lumi-rv-name{font-size:15px;font-weight:800;color:#3d5a1a;line-height:1.1;}
+    .lumi-rv-text{font-size:13.5px;color:#6a7a50;line-height:1.6;flex:1;}
+    .lumi-rv-badge{display:flex;align-items:center;gap:5px;font-size:12px;color:#7a9450;font-weight:700;}
+    .lumi-mq-row-2 .lumi-rev-card{background:#fdf6e7;border-color:#7a9450;box-shadow:0 2px 10px rgba(223,207,169,0.25);}
+
+    /* ── TABLET 576px – 991px ── */
+    @media(max-width:991px){
+        .lumi-mq-area{margin:0 20px;}
+        .lumi-baby-img{width:120px;top:-65px;right:90px;}
+        .lumi-parents-title{font-size:24px;gap:8px;}
+    }
+
+    /* ── MOBILE ≤575px ── */
+    @media(max-width:575px){
+        .lumi-parents{padding:50px 0 36px;}
+        .lumi-parents-header{padding-left:14px;padding-right:14px;margin-bottom:-18px;}
+        .lumi-parents-title{font-size:16px;gap:5px;letter-spacing:0;flex-wrap:wrap;justify-content:center;line-height:1.4;}
+        .lumi-parents-sub{font-size:12px;}
+        .lumi-mq-area{margin:0 10px;padding:18px 0 16px;border-radius:20px;}
+        .lumi-baby-img{display:none;}
+        .lumi-mq-row+.lumi-mq-row{margin-top:10px;}
+        .lumi-rev-card{width:240px;min-height:118px;padding:14px 13px;gap:8px;}
+        .lumi-rv-av{width:40px;height:40px;min-width:40px;font-size:15px;}
+        .lumi-rv-name{font-size:13px;}
+        .lumi-rv-text{font-size:12px;line-height:1.5;}
+        .lumi-rv-stars{font-size:12px;}
+        .lumi-rv-badge{font-size:11px;}
+    }
+</style>
+
+<div class="lumi-parents-header">
+    <h2 class="lumi-parents-title">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="#8aa74b"><path d="M17 8C8 10 5.9 16.17 3.82 19.41L5.71 20l1-2.3A4.49 4.49 0 008 18c7 0 10-7.5 9-10z"></path></svg>
+        Loved by Parents, Trusted by Experts
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="#8aa74b" style="transform:scaleX(-1)"><path d="M17 8C8 10 5.9 16.17 3.82 19.41L5.71 20l1-2.3A4.49 4.49 0 008 18c7 0 10-7.5 9-10z"></path></svg>
+    </h2>
+    <p class="lumi-parents-sub">Real stories from real parents</p>
+</div>
+
+<div class="lumi-mq-area">
+<img src="./index_files/baby.webp" alt="Baby" class="lumi-baby-img">
+    <svg class="lumi-flower-dot" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="18" cy="8" rx="5" ry="9" fill="#3d5a1a" transform="rotate(0   18 18)"></ellipse>
+        <ellipse cx="18" cy="8" rx="5" ry="9" fill="#3d5a1a" transform="rotate(45  18 18)"></ellipse>
+        <ellipse cx="18" cy="8" rx="5" ry="9" fill="#3d5a1a" transform="rotate(90  18 18)"></ellipse>
+        <ellipse cx="18" cy="8" rx="5" ry="9" fill="#3d5a1a" transform="rotate(135 18 18)"></ellipse>
+        <circle cx="18" cy="18" r="6" fill="#607919"></circle>
+        <circle cx="18" cy="18" r="3" fill="#fcf7ea"></circle>
+    </svg>
+    <div class="lumi-mq-row lumi-mq-row-1"><div class="lumi-mq-track">
+        <div class="lumi-rev-card"><div class="lumi-rv-top"><div class="lumi-rv-av" style="background:#d4956a;">L</div><div><div class="lumi-rv-stars">★★★★★</div><div class="lumi-rv-name">Lakshmi T.</div></div></div><p class="lumi-rv-text">Finally found a diaper that keeps my baby happy and active.</p><div class="lumi-rv-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="#8aa74b"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Verified Buyer</div></div>
+        <div class="lumi-rev-card"><div class="lumi-rv-top"><div class="lumi-rv-av" style="background:#c47a8a;">A</div><div><div class="lumi-rv-stars">★★★★★</div><div class="lumi-rv-name">Anitha R.</div></div></div><p class="lumi-rv-text">As a mom, comfort matters most. Lumi9 gives my baby exactly that.</p><div class="lumi-rv-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="#8aa74b"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Verified Buyer</div></div>
+        <div class="lumi-rev-card"><div class="lumi-rv-top"><div class="lumi-rv-av" style="background:#5a9a8a;">D</div><div><div class="lumi-rv-stars">★★★★★</div><div class="lumi-rv-name">Deepika V.</div></div></div><p class="lumi-rv-text">My baby smiles more, sleeps better, and stays comfortable longer.</p><div class="lumi-rv-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="#8aa74b"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Verified Buyer</div></div>
+        <div class="lumi-rev-card"><div class="lumi-rv-top"><div class="lumi-rv-av" style="background:#c4854a;">R</div><div><div class="lumi-rv-stars">★★★★★</div><div class="lumi-rv-name">Radhika M.</div></div></div><p class="lumi-rv-text">Soft like a hug, protective like a mothers care.</p><div class="lumi-rv-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="#8aa74b"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Verified Buyer</div></div>
+        <div class="lumi-rev-card"><div class="lumi-rv-top"><div class="lumi-rv-av" style="background:#8a6ab4;">K</div><div><div class="lumi-rv-stars">★★★★★</div><div class="lumi-rv-name">Keerthana J.</div></div></div><p class="lumi-rv-text">One of the best diapers I have used for my little one.</p><div class="lumi-rv-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="#8aa74b"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Verified Buyer</div></div>
+        <div class="lumi-rev-card"><div class="lumi-rv-top"><div class="lumi-rv-av" style="background:#6a8a5a;">A</div><div><div class="lumi-rv-stars">★★★★★</div><div class="lumi-rv-name">Aarthi K.</div></div></div><p class="lumi-rv-text">Tried a few brands before. Lumi9 fits well and does not feel bulky.</p><div class="lumi-rv-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="#8aa74b"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Verified Buyer</div></div>
+        <div class="lumi-rev-card"><div class="lumi-rv-top"><div class="lumi-rv-av" style="background:#d4956a;">L</div><div><div class="lumi-rv-stars">★★★★★</div><div class="lumi-rv-name">Lakshmi T.</div></div></div><p class="lumi-rv-text">Finally found a diaper that keeps my baby happy and active.</p><div class="lumi-rv-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="#8aa74b"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Verified Buyer</div></div>
+        <div class="lumi-rev-card"><div class="lumi-rv-top"><div class="lumi-rv-av" style="background:#c47a8a;">A</div><div><div class="lumi-rv-stars">★★★★★</div><div class="lumi-rv-name">Anitha R.</div></div></div><p class="lumi-rv-text">As a mom, comfort matters most. Lumi9 gives my baby exactly that.</p><div class="lumi-rv-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="#8aa74b"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Verified Buyer</div></div>
+        <div class="lumi-rev-card"><div class="lumi-rv-top"><div class="lumi-rv-av" style="background:#5a9a8a;">D</div><div><div class="lumi-rv-stars">★★★★★</div><div class="lumi-rv-name">Deepika V.</div></div></div><p class="lumi-rv-text">My baby smiles more, sleeps better, and stays comfortable longer.</p><div class="lumi-rv-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="#8aa74b"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Verified Buyer</div></div>
+        <div class="lumi-rev-card"><div class="lumi-rv-top"><div class="lumi-rv-av" style="background:#c4854a;">R</div><div><div class="lumi-rv-stars">★★★★★</div><div class="lumi-rv-name">Radhika M.</div></div></div><p class="lumi-rv-text">Soft like a hug, protective like a mothers care.</p><div class="lumi-rv-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="#8aa74b"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Verified Buyer</div></div>
+        <div class="lumi-rev-card"><div class="lumi-rv-top"><div class="lumi-rv-av" style="background:#8a6ab4;">K</div><div><div class="lumi-rv-stars">★★★★★</div><div class="lumi-rv-name">Keerthana J.</div></div></div><p class="lumi-rv-text">One of the best diapers I have used for my little one.</p><div class="lumi-rv-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="#8aa74b"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Verified Buyer</div></div>
+        <div class="lumi-rev-card"><div class="lumi-rv-top"><div class="lumi-rv-av" style="background:#6a8a5a;">A</div><div><div class="lumi-rv-stars">★★★★★</div><div class="lumi-rv-name">Aarthi K.</div></div></div><p class="lumi-rv-text">Tried a few brands before. Lumi9 fits well and does not feel bulky.</p><div class="lumi-rv-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="#8aa74b"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Verified Buyer</div></div>
+    </div></div>
+    <div class="lumi-mq-row lumi-mq-row-2"><div class="lumi-mq-track">
+        <div class="lumi-rev-card"><div class="lumi-rv-top"><div class="lumi-rv-av" style="background:#c47060;">H</div><div><div class="lumi-rv-stars">★★★★★</div><div class="lumi-rv-name">Harini V.</div></div></div><p class="lumi-rv-text">My baby skin is quite sensitive. Lumi9 has been gentle and rash-free for us.</p><div class="lumi-rv-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="#8aa74b"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Verified Buyer</div></div>
+        <div class="lumi-rev-card"><div class="lumi-rv-top"><div class="lumi-rv-av" style="background:#5a7a9a;">P</div><div><div class="lumi-rv-stars">★★★★★</div><div class="lumi-rv-name">Pavithra N.</div></div></div><p class="lumi-rv-text">As a first-time mom, finding the right diaper was stressful. Lumi9 made it easy.</p><div class="lumi-rv-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="#8aa74b"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Verified Buyer</div></div>
+        <div class="lumi-rev-card"><div class="lumi-rv-top"><div class="lumi-rv-av" style="background:#7a9a5a;">J</div><div><div class="lumi-rv-stars">★★★★★</div><div class="lumi-rv-name">Janani P.</div></div></div><p class="lumi-rv-text">The diaper stays in place even when my little one is crawling around all day.</p><div class="lumi-rv-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="#8aa74b"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Verified Buyer</div></div>
+        <div class="lumi-rev-card"><div class="lumi-rv-top"><div class="lumi-rv-av" style="background:#9a5a6a;">S</div><div><div class="lumi-rv-stars">★★★★★</div><div class="lumi-rv-name">Swetha K.</div></div></div><p class="lumi-rv-text">The fit is snug without being too tight. My baby moves around comfortably.</p><div class="lumi-rv-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="#8aa74b"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Verified Buyer</div></div>
+        <div class="lumi-rev-card"><div class="lumi-rv-top"><div class="lumi-rv-av" style="background:#d4956a;">S</div><div><div class="lumi-rv-stars">★★★★★</div><div class="lumi-rv-name">Saranya B.</div></div></div><p class="lumi-rv-text">After trying multiple brands, this is the one my baby seems most comfortable in.</p><div class="lumi-rv-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="#8aa74b"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Verified Buyer</div></div>
+        <div class="lumi-rev-card"><div class="lumi-rv-top"><div class="lumi-rv-av" style="background:#c47a8a;">S</div><div><div class="lumi-rv-stars">★★★★★</div><div class="lumi-rv-name">Sharmila N.</div></div></div><p class="lumi-rv-text">Perfect for active little movers.</p><div class="lumi-rv-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="#8aa74b"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Verified Buyer</div></div>
+        <div class="lumi-rev-card"><div class="lumi-rv-top"><div class="lumi-rv-av" style="background:#c47060;">H</div><div><div class="lumi-rv-stars">★★★★★</div><div class="lumi-rv-name">Harini V.</div></div></div><p class="lumi-rv-text">My baby skin is quite sensitive. Lumi9 has been gentle and rash-free for us.</p><div class="lumi-rv-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="#8aa74b"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Verified Buyer</div></div>
+        <div class="lumi-rev-card"><div class="lumi-rv-top"><div class="lumi-rv-av" style="background:#5a7a9a;">P</div><div><div class="lumi-rv-stars">★★★★★</div><div class="lumi-rv-name">Pavithra N.</div></div></div><p class="lumi-rv-text">As a first-time mom, finding the right diaper was stressful. Lumi9 made it easy.</p><div class="lumi-rv-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="#8aa74b"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Verified Buyer</div></div>
+        <div class="lumi-rev-card"><div class="lumi-rv-top"><div class="lumi-rv-av" style="background:#7a9a5a;">J</div><div><div class="lumi-rv-stars">★★★★★</div><div class="lumi-rv-name">Janani P.</div></div></div><p class="lumi-rv-text">The diaper stays in place even when my little one is crawling around all day.</p><div class="lumi-rv-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="#8aa74b"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Verified Buyer</div></div>
+        <div class="lumi-rev-card"><div class="lumi-rv-top"><div class="lumi-rv-av" style="background:#9a5a6a;">S</div><div><div class="lumi-rv-stars">★★★★★</div><div class="lumi-rv-name">Swetha K.</div></div></div><p class="lumi-rv-text">The fit is snug without being too tight. My baby moves around comfortably.</p><div class="lumi-rv-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="#8aa74b"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Verified Buyer</div></div>
+        <div class="lumi-rev-card"><div class="lumi-rv-top"><div class="lumi-rv-av" style="background:#d4956a;">S</div><div><div class="lumi-rv-stars">★★★★★</div><div class="lumi-rv-name">Saranya B.</div></div></div><p class="lumi-rv-text">After trying multiple brands, this is the one my baby seems most comfortable in.</p><div class="lumi-rv-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="#8aa74b"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Verified Buyer</div></div>
+        <div class="lumi-rev-card"><div class="lumi-rv-top"><div class="lumi-rv-av" style="background:#c47a8a;">S</div><div><div class="lumi-rv-stars">★★★★★</div><div class="lumi-rv-name">Sharmila N.</div></div></div><p class="lumi-rv-text">Perfect for active little movers.</p><div class="lumi-rv-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="#8aa74b"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>Verified Buyer</div></div>
+    </div></div>
+</div>
+</section><section class="gallery-section" aria-label="Gallery">
+<style>
+    .gallery-section{background:#fdf6e7;padding:20px 0 60px;position:relative;margin-top:-60px;overflow:hidden;width:100%;}
+    .gallery-sec-title{font-size:1.75rem;font-weight:700;color:#6d7e2d;text-align:center;margin-bottom:6px;}
+    .gallery-sec-title .sec-title-icon{margin:0 10px;font-size:1rem;color:#c8a040;}
+    .gallery-sec-sub{text-align:center;color:#7a9450;font-size:.82rem;margin-bottom:44px;}
+
+    .gallery-swiper{padding:28px 0 14px;overflow:visible;}
+    .gallery-swiper .swiper-wrapper{align-items:center;}
+
+    /* Swiper controls slide widths via slidesPerView breakpoints — no CSS width override */
+    .gallery-swiper .swiper-slide{transform:scale(0.88);transition:transform .4s ease;opacity:0.7;cursor:pointer;}
+    .gallery-swiper .swiper-slide-active{transform:scale(1);opacity:1;cursor:default;}
+
+    .gallery-card{border-radius:20px;overflow:visible;box-shadow:0 6px 24px rgba(0,0,0,0.11);background:#fdf6e7;position:relative;border:1.5px solid #8aa74b;display:flex;flex-direction:column;}
+    .gallery-icon-badge{position:absolute;top:-14px;left:14px;width:38px;height:38px;background:#e8f2d6;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 10px rgba(138,167,75,0.25);z-index:5;border:1.5px solid #8aa74b;}
+    .gallery-icon-badge img{width:22px;height:22px;object-fit:contain;}
+    .gallery-img-wrap{width:100%;border-radius:18px 18px 0 0;overflow:hidden;aspect-ratio:1080/1350;}
+    .gallery-img{width:100%;height:100%;object-fit:cover;display:block;}
+    .gallery-img-ph{width:100%;height:100%;background:linear-gradient(135deg,#e8d8b8,#d0c090);display:flex;align-items:center;justify-content:center;font-size:2rem;}
+    .gallery-footer{display:flex;flex-direction:column;align-items:center;gap:8px;padding:14px 16px 16px;background:#fdf6e7;border-radius:0 0 20px 20px;}
+    .gallery-label{font-size:.88rem;font-weight:700;color:#3d5a1a;line-height:1.4;text-align:center;}
+    .gallery-heart{color:#ccc;font-size:1.15rem;cursor:pointer;transition:all .3s;}
+    .gallery-swiper .swiper-slide-active .gallery-heart{color:#3d5a1a;}
+
+    .gallery-custom-dots{display:flex;justify-content:center;gap:8px;padding:14px 0 0;}
+    .gcd{width:9px;height:9px;border-radius:50%;background:#bbb;opacity:.6;border:none;cursor:pointer;padding:0;transition:all .2s;}
+    .gcd.active{background:#3d5a1a;opacity:1;transform:scale(1.25);}
+
+    @media(max-width:991px){.gallery-section{padding:30px 0 50px;}.gallery-sec-title{font-size:1.4rem;}}
+    @media(max-width:575px){.gallery-section{padding:20px 0 36px;margin-top:-20px;}.gallery-sec-title{font-size:1.1rem;line-height:1.3;}.gallery-sec-sub{font-size:.74rem;margin-bottom:24px;}.gallery-custom-dots{padding:10px 0 0;}.gcd{width:8px;height:8px;}}
+</style>
+
+<h2 class="gallery-sec-title">
+    <span class="sec-title-icon">✦</span>
+    Every Expression, Wrapped in Comfort
+    <span class="sec-title-icon">✦</span>
+</h2>
+<p class="gallery-sec-sub">From giggles to tiny yawns, we've got comfort covered.</p>
+
+<div class="position-relative">
+    <div class="swiper gallery-swiper swiper-initialized swiper-horizontal swiper-backface-hidden">
+        <div class="swiper-wrapper" id="swiper-wrapper-97b6df2339cfdc1a" aria-live="polite" style="cursor: grab; transition-duration: 0ms; transition-delay: 0ms; transform: translate3d(-850.2px, 0px, 0px);"><div class="swiper-slide" role="group" aria-label="3 / 7" data-swiper-slide-index="2" style="width: 271.4px; margin-right: 12px;">
+                <div class="gallery-card">
+                    <div class="gallery-icon-badge"><img src="./index_files/baby_paw.webp" alt="paw"></div>
+                    <div class="gallery-img-wrap">
+                        <img class="gallery-img" src="./index_files/split_baby_2.webp" alt="Active &amp; Playful" onerror="this.style.display=&#39;none&#39;;this.nextElementSibling.style.display=&#39;flex&#39;;">
+                        <div class="gallery-img-ph" style="display:none;">👶</div>
+                    </div>
+                    <div class="gallery-footer">
+                        <span class="gallery-label">Active &amp; Playful</span>
+                        <i class="far fa-heart gallery-heart"></i>
+                    </div>
+                </div>
+            </div><div class="swiper-slide" role="group" aria-label="4 / 7" data-swiper-slide-index="3" style="width: 271.4px; margin-right: 12px;">
+                <div class="gallery-card">
+                    <div class="gallery-icon-badge"><img src="./index_files/baby_paw.webp" alt="paw"></div>
+                    <div class="gallery-img-wrap">
+                        <img class="gallery-img" src="./index_files/cry baby.webp" alt="Baby Cry Relief" onerror="this.style.display=&#39;none&#39;;this.nextElementSibling.style.display=&#39;flex&#39;;">
+                        <div class="gallery-img-ph" style="display:none;">👶</div>
+                    </div>
+                    <div class="gallery-footer">
+                        <span class="gallery-label">Baby Cry Relief</span>
+                        <i class="far fa-heart gallery-heart"></i>
+                    </div>
+                </div>
+            </div><div class="swiper-slide" role="group" aria-label="5 / 7" data-swiper-slide-index="4" style="width: 271.4px; margin-right: 12px;">
+                <div class="gallery-card">
+                    <div class="gallery-icon-badge"><img src="./index_files/baby_paw.webp" alt="paw"></div>
+                    <div class="gallery-img-wrap">
+                        <img class="gallery-img" src="./index_files/split_baby_4.webp" alt="Sad No More" onerror="this.style.display=&#39;none&#39;;this.nextElementSibling.style.display=&#39;flex&#39;;">
+                        <div class="gallery-img-ph" style="display:none;">👶</div>
+                    </div>
+                    <div class="gallery-footer">
+                        <span class="gallery-label">Sad No More</span>
+                        <i class="far fa-heart gallery-heart"></i>
+                    </div>
+                </div>
+            </div><div class="swiper-slide" role="group" aria-label="6 / 7" data-swiper-slide-index="5" style="width: 271.4px; margin-right: 12px;">
+                <div class="gallery-card">
+                    <div class="gallery-icon-badge"><img src="./index_files/baby_paw.webp" alt="paw"></div>
+                    <div class="gallery-img-wrap">
+                        <img class="gallery-img" src="./index_files/image-5.webp" alt="Peaceful Feeling" onerror="this.style.display=&#39;none&#39;;this.nextElementSibling.style.display=&#39;flex&#39;;">
+                        <div class="gallery-img-ph" style="display:none;">👶</div>
+                    </div>
+                    <div class="gallery-footer">
+                        <span class="gallery-label">Peaceful Feeling</span>
+                        <i class="far fa-heart gallery-heart"></i>
+                    </div>
+                </div>
+            </div><div class="swiper-slide swiper-slide-prev" role="group" aria-label="7 / 7" data-swiper-slide-index="6" style="width: 271.4px; margin-right: 12px;">
+                <div class="gallery-card">
+                    <div class="gallery-icon-badge"><img src="./index_files/baby_paw.webp" alt="paw"></div>
+                    <div class="gallery-img-wrap">
+                        <img class="gallery-img" src="./index_files/split_baby_3.jpeg" alt="Pure &amp; Gentle" onerror="this.style.display=&#39;none&#39;;this.nextElementSibling.style.display=&#39;flex&#39;;" style="display: none;">
+                        <div class="gallery-img-ph" style="display: flex;">👶</div>
+                    </div>
+                    <div class="gallery-footer">
+                        <span class="gallery-label">Pure &amp; Gentle</span>
+                        <i class="far fa-heart gallery-heart"></i>
+                    </div>
+                </div>
+            </div>
+                                    <div class="swiper-slide swiper-slide-active" role="group" aria-label="1 / 7" data-swiper-slide-index="0" style="width: 271.4px; margin-right: 12px;">
+                <div class="gallery-card">
+                    <div class="gallery-icon-badge"><img src="./index_files/baby_paw.webp" alt="paw"></div>
+                    <div class="gallery-img-wrap">
+                        <img class="gallery-img" src="./index_files/smile baby.webp" alt="Cute &amp; Adorable" onerror="this.style.display=&#39;none&#39;;this.nextElementSibling.style.display=&#39;flex&#39;;" style="display: none;">
+                        <div class="gallery-img-ph" style="display: flex;">👶</div>
+                    </div>
+                    <div class="gallery-footer">
+                        <span class="gallery-label">Cute &amp; Adorable</span>
+                        <i class="far fa-heart gallery-heart"></i>
+                    </div>
+                </div>
+            </div>
+                        <div class="swiper-slide swiper-slide-next" role="group" aria-label="2 / 7" data-swiper-slide-index="1" style="width: 271.4px; margin-right: 12px;">
+                <div class="gallery-card">
+                    <div class="gallery-icon-badge"><img src="./index_files/baby_paw.webp" alt="paw"></div>
+                    <div class="gallery-img-wrap">
+                        <img class="gallery-img" src="./index_files/split_baby_1.webp" alt="Kindness &amp; Care" onerror="this.style.display=&#39;none&#39;;this.nextElementSibling.style.display=&#39;flex&#39;;">
+                        <div class="gallery-img-ph" style="display:none;">👶</div>
+                    </div>
+                    <div class="gallery-footer">
+                        <span class="gallery-label">Kindness &amp; Care</span>
+                        <i class="far fa-heart gallery-heart"></i>
+                    </div>
+                </div>
+            </div>
+                        
+                        
+                        
+                        
+                        
+                    </div>
+    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+    <div class="gallery-custom-dots">
+        <button class="gcd active" data-idx="0" aria-label="Slide 1"></button>
+        <button class="gcd" data-idx="1" aria-label="Slide 2"></button>
+        <button class="gcd" data-idx="2" aria-label="Slide 3"></button>
+        <button class="gcd" data-idx="3" aria-label="Slide 4"></button>
+        <button class="gcd" data-idx="4" aria-label="Slide 5"></button>
+        <button class="gcd" data-idx="5" aria-label="Slide 6"></button>
+        <button class="gcd" data-idx="6" aria-label="Slide 7"></button>
+    </div>
+</div>
+</section>
+<style>
+    /* ============================================================
+       JOURNEY SECTION — scoped styles only
+    ============================================================ */
+    .journey-section {
+        background: #f5eac3;
+        padding: 70px 140px;
+    }
+    .j-sec-title {
+        font-size: 1.9rem; font-weight: 800; color: #3a5c1e;
+        text-align: center; margin-bottom: 10px;
+    }
+    .j-sec-sub {
+        text-align: center; color: #6d7e2d;
+        font-size: .85rem; margin-bottom: 48px;
+    }
+
+    /* ── DESKTOP: 3-column grid — equal outer cols = image truly centered ── */
+    .journey-showcase {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        gap: 48px;
+        align-items: center;
+    }
+
+    /* LEFT: vertical paw list */
+    .j-paw-wrap { display: contents; }
+    .journey-paw-selector {
+        flex: 0 0 210px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+    }
+    .j-paw-row {
+        display: flex; align-items: center;
+        gap: 12px; width: 100%; cursor: pointer;
+    }
+    .j-paw-btn {
+        width: 57px; height: 57px; background: #fff;
+        border: 2.5px solid #c8d98a; border-radius: 50%;
+        display: flex; align-items: center; justify-content: center;
+        cursor: pointer; transition: all .3s ease; flex-shrink: 0;
+        box-shadow: 0 3px 10px rgba(109,126,45,.13);
+    }
+    .j-paw-btn img.paw-thumb {
+        width: 38px; height: 38px; object-fit: cover; border-radius: 50%;
+    }
+    .j-paw-row.active .j-paw-btn {
+        border-color: #6d7e2d;
+        box-shadow: 0 0 0 3px rgba(109,126,45,.2), 0 4px 16px rgba(109,126,45,.2);
+        transform: scale(1.08);
+    }
+    .j-paw-row:hover .j-paw-btn { border-color: #6d7e2d; }
+    .j-paw-label { display: flex; flex-direction: column; }
+    .j-paw-label-title {
+        font-size: .95rem; font-weight: 700;
+        color: #3a5c1e; line-height: 1.3; transition: color .3s;
+    }
+    .j-paw-label-sub { font-size: .8rem; color: #6d7e2d; line-height: 1.4; }
+    .j-paw-row.active .j-paw-label-title { color: #455e25; }
+
+    /* Trail between rows */
+    .j-paw-trail {
+        display: flex; flex-direction: column;
+        align-items: center; gap: 2px;
+        padding: 3px 0 3px 24px;
+    }
+    .j-paw-trail i { color: #b5c47a; font-size: .58rem; opacity: .8; }
+    .j-paw-trail .trail-line {
+        width: 2px; height: 6px;
+        background: repeating-linear-gradient(to bottom,#b5c47a 0,#b5c47a 3px,transparent 3px,transparent 7px);
+    }
+
+    /* CENTER: image frame */
+    .journey-center-wrap {
+        display: flex; align-items: center; justify-content: center;
+    }
+    .j-img-frame {
+        width: 380px; height: 380px;
+        border-radius: 24px; overflow: hidden;
+        box-shadow: 0 12px 40px rgba(0,0,0,.13);
+        background: #f0ead6;
+        display: flex; align-items: center; justify-content: center;
+    }
+    .j-center-img {
+        width: 100%; height: 100%;
+        object-fit: cover; object-position: center center;
+        display: block; border-radius: 24px;
+        transition: opacity .45s cubic-bezier(.4,0,.2,1), transform .45s cubic-bezier(.4,0,.2,1);
+        animation: floatDiaper 3.5s ease-in-out infinite;
+    }
+    @keyframes floatDiaper {
+        0%,100% { transform: translateY(0); }
+        50%      { transform: translateY(-10px); }
+    }
+    .j-center-img.fade-out {
+        opacity: 0; transform: scale(.93) translateY(8px); animation: none;
+    }
+
+    /* RIGHT: feature list */
+    .journey-right {
+        min-width: 0;
+        display: flex; flex-direction: column;
+        gap: 14px;
+    }
+    .journey-right-title {
+        font-size: 1.3rem; font-weight: 800; color: #3a5c1e;
+        border-left: 4px solid #6d7e2d; padding-left: 12px; margin-bottom: 4px;
+    }
+    .j-feat-item {
+        display: flex; align-items: center; gap: 12px;
+        background: rgba(255,255,255,0.45);
+        padding: 11px 14px;
+        border-radius: 14px;
+        box-shadow: 0 2px 14px rgba(109,126,45,0.10);
+        transition: background 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
+        cursor: default;
+    }
+    .j-feat-item:hover {
+        background: #ffffff;
+        box-shadow: 0 6px 28px rgba(109,126,45,0.18);
+        transform: translateY(-3px);
+    }
+    .j-feat-icon {
+        width: 40px; height: 40px; background: #f0f5e0; border-radius: 50%;
+        display: flex; align-items: center; justify-content: center;
+        font-size: 1rem; color: #6d7e2d; flex-shrink: 0;
+        box-shadow: 0 2px 10px rgba(109,126,45,.14);
+        transition: background 0.25s ease;
+    }
+    .j-feat-item:hover .j-feat-icon { background: #e4f0c8; }
+    .j-feat-title { font-size: .92rem; font-weight: 700; color: #2a3d18; margin-bottom: 2px; }
+    .j-feat-desc {
+        font-size: .78rem; color: #8a9a70; line-height: 1.45;
+        display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    /* ── Tablet & Mobile (≤1024px): stack vertically ── */
+    @media (max-width: 1024px) {
+        .journey-section { padding: 44px 16px 50px; }
+
+        /* Switch grid → flex column */
+        .journey-showcase {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 28px;
+        }
+
+        /* Disable float animation on mobile */
+        .j-center-img { animation: none !important; transform: none !important; }
+
+        /* Paw wrap: horizontal scrollable strip */
+        .j-paw-wrap { display: block; width: 100%; overflow: hidden; }
+        .journey-paw-selector {
+            flex-direction: row; flex: unset; width: 100%;
+            overflow-x: auto; overflow-y: visible;
+            -webkit-overflow-scrolling: touch; scrollbar-width: none;
+            margin: 0; padding: 6px 0 12px; gap: 0; align-items: flex-start;
+        }
+        .journey-paw-selector::-webkit-scrollbar { display: none; }
+        .j-paw-row {
+            flex-direction: column; align-items: center; text-align: center;
+            gap: 6px; min-width: 80px; flex-shrink: 0; padding: 4px 2px; width: auto;
+        }
+        .j-paw-label { align-items: center; }
+        .j-paw-label-title { font-size: .75rem; font-weight: 700; }
+        .j-paw-label-sub { font-size: .64rem; }
+
+        /* Trail: horizontal */
+        .j-paw-trail {
+            flex-direction: row; align-items: center; justify-content: center;
+            padding: 0; min-width: 18px; flex-shrink: 0; margin-top: 23px;
+        }
+        .j-paw-trail i { display: none; }
+        .j-paw-trail .trail-line { width: 18px; height: 2px; background: #b5c47a; }
+
+        /* Center image */
+        .journey-center-wrap {
+            width: 88%; max-width: 420px;
+            margin: 0 auto; display: flex; justify-content: center;
+        }
+        .j-img-frame {
+            width: 100%; height: auto;
+            aspect-ratio: 1 / 0.85;
+            overflow: hidden; border-radius: 20px;
+        }
+        .j-center-img {
+            width: 100%; height: 100%;
+            object-fit: cover; object-position: center center;
+            border-radius: 20px; display: block;
+        }
+
+        /* Features */
+        .journey-right {
+            width: 100%; max-width: 100%;
+            margin: 0 auto; gap: 14px;
+        }
+        .journey-right-title { font-size: 1.1rem; }
+    }
+
+    /* ── Mobile (≤640px) ── */
+    @media (max-width: 640px) {
+        .journey-section { padding: 32px 14px 40px; }
+        .j-sec-title { font-size: 1.4rem; }
+        .j-paw-btn { width: 44px; height: 44px; }
+        .j-paw-btn img.paw-thumb { width: 30px; height: 30px; }
+        .j-paw-row { min-width: 66px; }
+        .j-paw-label-sub { display: none; }
+        .j-feat-icon { width: 36px; height: 36px; font-size: .85rem; }
+        .j-feat-title { font-size: .85rem; }
+        .j-feat-desc  { font-size: .75rem; }
+        .j-feat-item  { padding: 9px 11px; gap: 10px; }
+        .journey-center-wrap { width: 94%; }
+    }
+
+    /* ── Small mobile (≤420px) ── */
+    @media (max-width: 420px) {
+        .journey-section { padding: 28px 12px 36px; }
+        .j-paw-label { display: none; }
+        .j-paw-row { min-width: 52px; }
+        .j-paw-btn { width: 40px; height: 40px; }
+        .j-paw-btn img.paw-thumb { width: 26px; height: 26px; }
+        .j-paw-trail { min-width: 10px; margin-top: 18px; }
+        .j-paw-trail .trail-line { width: 10px; }
+        .journey-center-wrap { width: 100%; }
+        .j-sec-title { font-size: 1.2rem; }
+    }
+</style>
+
+<!-- ================================================================
+     A JOURNEY OF CARE
+================================================================ -->
+<section class="journey-section" id="about">
+    <h2 class="j-sec-title">
+        <span style="margin:0 8px">🌿</span>
+        A Journey of Care, Innovation &amp; Trust
+        <span style="margin:0 8px">🌿</span>
+    </h2>
+    <p class="j-sec-sub">Every detail crafted to keep your baby happy, healthy &amp; comfortable.</p>
+
+    <div class="journey-showcase mt-5">
+
+        
+        <div class="j-paw-wrap">
+        <div class="journey-paw-selector">
+
+            <div class="j-paw-row active" onclick="switchJourneyImg(&#39;diaper&#39;, this)">
+                <button class="j-paw-btn">
+                    <img class="paw-thumb" src="./index_files/Diaper new.webp" alt="Diaper">
+                </button>
+                <div class="j-paw-label">
+                    <div class="j-paw-label-title"><b>Lumi9 Diaper</b></div>
+                    <div class="j-paw-label-sub"><b>Premium quality &amp; fit</b></div>
+                </div>
+            </div>
+
+            <div class="j-paw-trail">
+                <div class="trail-line"></div><i class="fas fa-paw"></i><div class="trail-line"></div>
+            </div>
+
+            <div class="j-paw-row" onclick="switchJourneyImg(&#39;baby&#39;, this)">
+                <button class="j-paw-btn">
+                    <img class="paw-thumb" src="./index_files/baby_wear_diaper.webp" alt="Baby">
+                </button>
+                <div class="j-paw-label">
+                    <div class="j-paw-label-title"><b>Freedom to Play</b></div>
+                    <div class="j-paw-label-sub"><b>Active fit, happy baby</b></div>
+                </div>
+            </div>
+
+            <div class="j-paw-trail">
+                <div class="trail-line"></div><i class="fas fa-paw"></i><div class="trail-line"></div>
+            </div>
+
+            <div class="j-paw-row" onclick="switchJourneyImg(&#39;mom&#39;, this)">
+                <button class="j-paw-btn">
+                    <img class="paw-thumb" src="./index_files/mon_care_baby.webp" alt="Mom Care">
+                </button>
+                <div class="j-paw-label">
+                    <div class="j-paw-label-title"><b>Mom's Gentle Care</b></div>
+                    <div class="j-paw-label-sub"><b>Soft, safe &amp; effortless</b></div>
+                </div>
+            </div>
+
+            <div class="j-paw-trail">
+                <div class="trail-line"></div><i class="fas fa-paw"></i><div class="trail-line"></div>
+            </div>
+
+            <div class="j-paw-row" onclick="switchJourneyImg(&#39;sleep&#39;, this)">
+                <button class="j-paw-btn">
+                    <img class="paw-thumb" src="./index_files/sleep_baby.webp" alt="Sleep Baby">
+                </button>
+                <div class="j-paw-label">
+                    <div class="j-paw-label-title"><b>Peaceful Sleep</b></div>
+                    <div class="j-paw-label-sub"><b>Dry &amp; cozy all night</b></div>
+                </div>
+            </div>
+
+            <div class="j-paw-trail">
+                <div class="trail-line"></div><i class="fas fa-paw"></i><div class="trail-line"></div>
+            </div>
+
+            <div class="j-paw-row" onclick="switchJourneyImg(&#39;features&#39;, this)">
+                <button class="j-paw-btn">
+                    <img class="paw-thumb" src="./index_files/diaper_features.webp" alt="Diaper Features">
+                </button>
+                <div class="j-paw-label">
+                    <div class="j-paw-label-title"><b>Diaper Features</b></div>
+                    <div class="j-paw-label-sub"><b>Built for every moment</b></div>
+                </div>
+            </div>
+
+        </div>
+        </div>
+
+        
+        <div class="journey-center-wrap">
+            <div class="j-img-frame">
+                <img id="journeyCenterImg" class="j-center-img" src="./index_files/Diaper new.webp" alt="Lumi9 Diaper">
+            </div>
+        </div>
+
+        
+        <div class="journey-right" id="journeyRightPanel">
+
+            <div class="journey-right-title" id="journeyRightTitle">Why Lumi9 Stands Out</div>
+
+            <div class="j-feat-item">
+                <div class="j-feat-icon"><i id="jfi1" class="fas fa-award"></i></div>
+                <div>
+                    <div class="j-feat-title" id="jft1">Premium Quality</div>
+                    <div class="j-feat-desc" id="jfd1">Every Lumi9 diaper is crafted to the highest standards — because your baby deserves nothing but the best.</div>
+                </div>
+            </div>
+
+            <div class="j-feat-item">
+                <div class="j-feat-icon"><i id="jfi2" class="fas fa-tint"></i></div>
+                <div>
+                    <div class="j-feat-title" id="jft2">Instant Wetness Lock</div>
+                    <div class="j-feat-desc" id="jfd2">Super-absorbent core pulls moisture away instantly and locks it in — keeping the surface dry and comfortable.</div>
+                </div>
+            </div>
+
+            <div class="j-feat-item">
+                <div class="j-feat-icon"><i id="jfi3" class="fas fa-expand-alt"></i></div>
+                <div>
+                    <div class="j-feat-title" id="jft3">Stretchy Waistband</div>
+                    <div class="j-feat-desc" id="jfd3">360° stretchy waistband adapts to every move — sitting, crawling, rolling — without leaving marks.</div>
+                </div>
+            </div>
+
+            <div class="j-feat-item">
+                <div class="j-feat-icon"><i id="jfi4" class="fas fa-star"></i></div>
+                <div>
+                    <div class="j-feat-title" id="jft4">Light as Air</div>
+                    <div class="j-feat-desc" id="jfd4">Thin, lightweight construction provides superior comfort without compromising absorbency.</div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<script>
+    const journeyData = {
+        diaper: {
+            src:   'http://127.0.0.1:8000/images/Diaper new.webp',
+            title: "Why Lumi9 Stands Out",
+            feats: [
+                { icon:'fas fa-award',      t:'Premium Quality',           d:"Every Lumi9 diaper is crafted to the highest standards — because your baby deserves nothing but the best." },
+                { icon:'fas fa-tint',       t:'Instant Wetness Lock',      d:"Super-absorbent core pulls moisture away instantly and locks it in — keeping the surface dry and comfortable." },
+                { icon:'fas fa-expand-alt', t:'Stretchy Waistband',        d:"360° stretchy waistband adapts to every move — sitting, crawling, rolling — without leaving marks." },
+                { icon:'fas fa-star',       t:'Dermatologically Approved', d:"Tested and approved by dermatologists — safe for sensitive, delicate newborn skin." }
+            ]
+        },
+        baby: {
+            src:   'http://127.0.0.1:8000/images/baby_wear_diaper.webp',
+            title: "Happy Baby, Every Day",
+            feats: [
+                { icon:'fas fa-child',      t:'Active-Fit Design',         d:"Contoured shape and stretchy sides move naturally with baby — perfect for crawling, walking and everything in between." },
+                { icon:'fas fa-sun',        t:'Dry & Fresh All Day',       d:"Advanced absorption keeps baby dry and comfortable from morning playtime all the way through afternoon naps." },
+                { icon:'fas fa-laugh-beam', t:'No Rashes, No Fuss',        d:"Soft, breathable materials keep skin cool and rash-free — so baby stays happy and comfortable all day long." },
+                { icon:'fas fa-lock',       t:'Leak-Proof at Every Angle', d:"Snug leg cuffs and secure waistband seal in everything — no leaks during playtime, tummy time or on the go." }
+            ]
+        },
+        mom: {
+            src:   'http://127.0.0.1:8000/images/mon_care_baby.webp',
+            title: "Mom's Care & Confidence",
+            feats: [
+                { icon:'fas fa-heart',      t:'Easy, Stress-Free Changes', d:"Lumi9's simple tab-and-wrap design makes every diaper change quick, clean and worry-free for moms." },
+                { icon:'fas fa-shield-alt', t:'Trusted for Sensitive Skin',d:"Dermatologically tested and hypoallergenic — moms can trust Lumi9 to be gentle on their baby's skin." },
+                { icon:'fas fa-leaf',       t:'Bulk-Free',      d:"Designed to reduce bulkiness while ensuring superior dryness and unrestricted movement." },
+                { icon:'fas fa-clock',      t:'More Time, Less Worry',     d:"With up to 12hrs protection, moms get more time to enjoy precious moments instead of worrying about leaks." }
+            ]
+        },
+        sleep: {
+            src:   'http://127.0.0.1:8000/images/sleep_baby.webp',
+            title: "Comfort Through the Night",
+            feats: [
+                { icon:'fas fa-moon',        t:'0% Leakage Protection',        d:"Your baby can sleep peacefully through the night without any interruptions." },
+                { icon:'fas fa-feather-alt', t:'Feather-Light Softness',   d:"The ultra-soft inner layer feels like a gentle cloud — so light, baby won't even notice they're wearing it." },
+                { icon:'fas fa-wind',        t:'Breathable & Airy',        d:"Micro-ventilation keeps air flowing all night, preventing heat build-up and keeping skin fresh." },
+                { icon:'fas fa-expand-alt',  t:'Snug, Flexible Fit',       d:"Stretchy waistband and soft cuffs stay perfectly in place — no shifting, no gaps, no leaks during sleep." }
+            ]
+        },
+        features: {
+            src:   'http://127.0.0.1:8000/images/diaper_features.webp',
+            title: "Features of Lumi9 Diaper",
+            feats: [
+                { icon:'fas fa-feather-alt', t:'Ultra-Soft Inner Layer',   d:"Hypoallergenic, skin-friendly fabric — gentle on the most delicate newborn skin." },
+                { icon:'fas fa-tint',        t:'Up to 12hrs Absorption',   d:"Fast-lock core absorbs wetness instantly and keeps baby dry all day and overnight." },
+                { icon:'fas fa-shield-alt',  t:'360° Leakage Guard',       d:"Double-barrier leg cuffs and snug waistband prevent leaks from every angle." },
+                { icon:'fas fa-wind',        t:'New MOM-Friendly Design',   d:"Special contoured shape protects your newborn's sensitive umbilical cord area." }
+            ]
+        }
+    };
+
+    function switchJourneyImg(type, btn) {
+        const img   = document.getElementById('journeyCenterImg');
+        const title = document.getElementById('journeyRightTitle');
+        const data  = journeyData[type];
+
+        img.classList.add('fade-out');
+        setTimeout(() => {
+            img.src = data.src;
+            title.innerHTML = data.title;
+            data.feats.slice(0,4).forEach((f, i) => {
+                const n = i + 1;
+                document.getElementById('jfi'+n).className = f.icon;
+                document.getElementById('jft'+n).textContent = f.t;
+                document.getElementById('jfd'+n).textContent = f.d;
+            });
+            img.classList.remove('fade-out');
+        }, 350);
+
+        document.querySelectorAll('.j-paw-row').forEach(r => r.classList.remove('active'));
+        btn.classList.add('active');
+    }
+</script>
+<footer class="lumi-footer" id="contact" aria-label="Footer">
+<style>
+    .lumi-footer{background:#f5eac3;color:#3d5a1a;font-family:'Poppins',sans-serif;position:relative;margin-top:0;}
+    .lumi-footer-wave{display:block;line-height:0;background:#f5eac3;}
+    .lumi-footer-wave svg{display:block;width:100%;height:70px;}
+    .lumi-footer-inner{padding:36px 60px 28px;position:relative;overflow:hidden;}
+    .footer-logo-name{font-size:2rem;font-weight:900;color:#3d5a1a;line-height:1;}
+    .footer-logo-name span{color:#8aa74b;}
+    .footer-logo-sub{color:#6d7e2d;font-size:.68rem;margin-top:5px;font-weight:500;}
+    .footer-col h6{font-size:.84rem;font-weight:700;color:#6d7e2d;margin-bottom:14px;letter-spacing:.02em;}
+    .footer-col a{display:flex;align-items:center;gap:6px;color:#6d7e2d;font-size:.78rem;margin-bottom:9px;transition:color .2s;text-decoration:none;}
+    .footer-col a:hover{color:#3d5a1a;}
+    .footer-col .footer-contact-icon{font-size:.75rem;color:#6d7e2d;flex-shrink:0;}
+    .footer-mascot{position:absolute;right:48px;bottom:80px;height:170px;pointer-events:none;object-fit:contain;}
+    .footer-copy{border-top:1px solid rgba(61,90,26,.14);margin-top:28px;padding-top:15px;color:#3d5a1a;font-size:.7rem;text-align:center;}
+    @media(max-width:991px){.lumi-footer-inner{padding:36px 24px 28px;}.footer-mascot{height:120px;right:12px;}.lumi-footer-wave svg{height:50px;}}
+    @media(max-width:767px){.footer-mascot{display:none;}}
+    @media(max-width:575px){.lumi-footer-inner{padding:24px 16px 20px;}.lumi-footer-wave svg{height:36px;}.footer-col h6{font-size:.78rem;margin-bottom:10px;}.footer-col a{font-size:.72rem;margin-bottom:7px;}.footer-copy{font-size:.64rem;margin-top:18px;padding-top:12px;}}
+</style>
+
+<!-- Top wave transition -->
+<div class="lumi-footer-wave" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 70" preserveAspectRatio="none">
+        <path fill="#f5eac3" d="M0,35 C200,70 400,0 600,35 C800,70 1000,0 1200,35 C1300,52 1380,44 1440,35 L1440,70 L0,70 Z"></path>
+        <path fill="none" stroke="#beaf81" stroke-width="3" stroke-linecap="round" d="M0,35 C200,70 400,0 600,35 C800,70 1000,0 1200,35 C1300,52 1380,44 1440,35"></path>
+    </svg>
+</div>
+
+<div class="lumi-footer-inner">
+    <div class="row gy-4">
+
+        <!-- Brand -->
+        <div class="col-lg-3 col-md-6" style="margin-top:10px;">
+            <img src="./index_files/logo (2).webp" alt="Lumi9" style="height:50px;width:auto;display:block;margin-bottom:6px;object-fit:contain;max-width:100%;">
+            <div class="footer-logo-sub">Made with love, for your little one.</div>
+        </div>
+
+        <!-- Shop -->
+        <div class="col-lg-2 col-md-3 col-6 footer-col">
+            <h6>Shop</h6>
+            <a href="http://127.0.0.1:8000/shop">New Born</a>
+            <a href="http://127.0.0.1:8000/shop">Infant</a>
+            <a href="http://127.0.0.1:8000/shop">Toddler</a>
+            <a href="http://127.0.0.1:8000/shop">Baby Wipes</a>
+        </div>
+
+        <!-- About Us -->
+        <div class="col-lg-2 col-md-3 col-6 footer-col">
+            <h6>About Us</h6>
+            <a href="http://127.0.0.1:8000/about">Our Story</a>
+            <a href="http://127.0.0.1:8000/about">Mission</a>
+            <a href="http://127.0.0.1:8000/about">Sustainability</a>
+            <a href="http://127.0.0.1:8000/about">Careers</a>
+        </div>
+
+        <!-- Help -->
+        <div class="col-lg-2 col-md-3 col-6 footer-col">
+            <h6>Help</h6>
+            <a href="http://127.0.0.1:8000/header#">FAQs</a>
+            <a href="http://127.0.0.1:8000/header#">Returns</a>
+            <a href="http://127.0.0.1:8000/header#">Shipping Info</a>
+            <a href="http://127.0.0.1:8000/header#">Size Guide</a>
+        </div>
+
+        <!-- Contact -->
+        <div class="col-lg-2 col-md-3 col-6 footer-col">
+            <h6>Contact</h6>
+            <a href="tel:+919898545210"><i class="fas fa-phone footer-contact-icon"></i> +91 98985 45210</a>
+            <a href="http://127.0.0.1:8000/contact"><i class="fas fa-envelope footer-contact-icon"></i> Email Us</a>
+            <a href="http://127.0.0.1:8000/header#"><i class="fab fa-whatsapp footer-contact-icon"></i> WhatsApp</a>
+            <a href="http://127.0.0.1:8000/header#"><i class="fab fa-instagram footer-contact-icon"></i> Instagram</a>
+        </div>
+
+    </div>
+
+    <!-- Mascot -->
+    <img class="footer-mascot" src="./index_files/image-2.webp" alt="Lumi mascot">
+
+    <div class="footer-copy">
+        © 2026 Lumi9. All rights reserved. Made with ♥ for little ones.
+    </div>
+</div>
+</footer>
+
+<script src="./index_files/bootstrap.bundle.min.js.download"></script>
+<script src="./index_files/swiper-bundle.min.js.download"></script>
+<script>
+/* Gallery Swiper — init on load so layout is stable before width measurement */
+window.addEventListener('load',function(){
+    var galSwiper=new Swiper('.gallery-swiper',{
+        slidesPerView:5,centeredSlides:true,spaceBetween:12,loop:true,
+        allowTouchMove:false,grabCursor:true,
+        breakpoints:{0:{slidesPerView:1.2,spaceBetween:10},480:{slidesPerView:2.2,spaceBetween:12},768:{slidesPerView:5,spaceBetween:12}}
+    });
+    (function(){
+        var dots=document.querySelectorAll('.gcd');
+        function setDot(i){
+            dots.forEach(function(d,j){d.classList.toggle('active',j===i%7);});
+            document.querySelectorAll('.gallery-heart').forEach(function(h){h.classList.replace('fas','far');h.style.color='';});
+            var active=document.querySelector('.swiper-slide-active .gallery-heart');
+            if(active){active.classList.replace('far','fas');active.style.color='#3d5a1a';}
+        }
+        galSwiper.on('realIndexChange',function(){setDot(galSwiper.realIndex);});
+        dots.forEach(function(d){d.addEventListener('click',function(){galSwiper.slideToLoop(parseInt(this.getAttribute('data-idx')));});});
+        galSwiper.on('click',function(){
+            if(galSwiper.clickedIndex!==undefined){
+                var realIdx=parseInt(galSwiper.slides[galSwiper.clickedIndex].getAttribute('data-swiper-slide-index'));
+                if(!isNaN(realIdx))galSwiper.slideToLoop(realIdx);
+            }
+        });
+    })();
+    document.querySelectorAll('.gallery-heart').forEach(function(h){
+        h.addEventListener('click',function(){
+            h.classList.toggle('fas');h.classList.toggle('far');
+            h.style.color=h.classList.contains('fas')?'#3d5a1a':'';
+        });
+    });
+});
+/* Smooth scroll for nav links */
+(function(){
+    var headerH = document.querySelector('.lumi-header') ? document.querySelector('.lumi-header').offsetHeight : 76;
+    document.querySelectorAll('.lumi-scroll-link').forEach(function(link){
+        link.addEventListener('click', function(e){
+            var target = document.querySelector(this.getAttribute('href'));
+            if(!target) return;
+            e.preventDefault();
+            var top = target.getBoundingClientRect().top + window.scrollY - headerH;
+            window.scrollTo({ top: top, behavior: 'smooth' });
+            /* close mobile menu */
+            var menu = document.getElementById('lumiNavMenu');
+            if(menu && menu.classList.contains('show')){
+                var toggler = document.querySelector('.lumi-toggler');
+                if(toggler) toggler.click();
+            }
+        });
+    });
+    /* active link on scroll */
+    var sections = [
+        { id: 'home', link: document.querySelector('a[href="#home"]') },
+        { id: 'about', link: document.querySelector('a[href="#about"]') },
+        { id: 'contact', link: document.querySelector('a[href="#contact"]') }
+    ];
+    window.addEventListener('scroll', function(){
+        var scrollY = window.scrollY + headerH + 40;
+        sections.forEach(function(s){
+            var el = document.getElementById(s.id);
+            if(!el || !s.link) return;
+            var top = el.offsetTop;
+            var bottom = top + el.offsetHeight;
+            if(scrollY >= top && scrollY < bottom){
+                document.querySelectorAll('.lumi-scroll-link').forEach(function(l){ l.classList.remove('active'); });
+                s.link.classList.add('active');
+            }
+        });
+    });
+})();
+/* Search toggle */
+(function(){
+    var b=document.getElementById('lumiSearchBtn'),w=document.getElementById('lumiSearchWrap');
+    if(!b||!w)return;
+    b.addEventListener('click',function(){var o=w.classList.toggle('open');if(o){var i=w.querySelector('.lumi-search-input');if(i)setTimeout(function(){i.focus();},310);}});
+    document.addEventListener('click',function(e){if(!w.contains(e.target)&&!b.contains(e.target))w.classList.remove('open');});
+})();
+</script>
+
+
+</body></html>
