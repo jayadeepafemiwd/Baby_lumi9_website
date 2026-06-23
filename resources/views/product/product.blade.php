@@ -117,11 +117,11 @@
 
 /* Center (active) card — inner = dark green */
 .product-swiper .swiper-slide-active .pc-shell {
-    background: rgba(30,58,30,0.25);
+    background:#6d7e2d;
     box-shadow: 0 8px 32px rgba(30,58,30,0.25);
 }
 .product-swiper .swiper-slide-active .pc-inner {
-    background: #1e3a1e;
+    background:#6d7e2d;
 }
 
 /* Spacer inside shell — holds the image area height */
