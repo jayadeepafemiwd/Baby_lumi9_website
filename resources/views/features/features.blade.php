@@ -116,3 +116,11 @@
 
     </div>
 </section>
+
+{{-- Bottom wave: features (#f5eac3) → babies (#fdf6e7) --}}
+<div style="background:#f5eac3;line-height:0;display:block;margin:0;padding:0;" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 44" preserveAspectRatio="none" width="100%" height="44" style="display:block;">
+        <path d="M0,22 C240,6 480,6 720,22 C960,38 1200,38 1440,22 L1440,44 L0,44 Z" fill="#fdf6e7"/>
+        <path d="M0,22 C240,6 480,6 720,22 C960,38 1200,38 1440,22" fill="none" stroke="#8aa74b" stroke-width="3" stroke-linecap="round"/>
+    </svg>
+</div>

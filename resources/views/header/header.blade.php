@@ -41,7 +41,8 @@
         .lumi-search-input::placeholder{color:#b0c850;}
         .lumi-search-submit{background:none;border:none;cursor:pointer;color:#e8f090;display:flex;align-items:center;padding:0;flex-shrink:0;}
         .lumi-wave{display:block;background-color:#8aa74b;line-height:0;margin:0;padding:0;}
-        .lumi-wave svg{display:block;width:100%;height:20px;}
+        .lumi-wave svg{display:block;width:100%;height:28px;}
+        @media(max-width:640px){.lumi-wave svg{height:18px;}}
         /* Swiper overrides */
         .swiper-button-next,.swiper-button-prev{color:#fff;background:#8aa74b;width:38px;height:38px;border-radius:50%;box-shadow:0 3px 12px rgba(138,167,75,0.35);top:42%;}
         .swiper-button-next:hover,.swiper-button-prev:hover{background:#607919;}

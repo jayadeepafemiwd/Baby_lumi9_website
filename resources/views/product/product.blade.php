@@ -88,7 +88,7 @@
 .pc-wrap {
     position: relative;
     width: 100%;
-    max-width: 235px;
+    max-width: 265px;
     cursor: pointer;
     padding-bottom: 50px;
 }
@@ -98,7 +98,7 @@
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    min-height: 330px;
+    min-height: 375px;
     background: rgba(30,58,30,0.25);
     padding: 2.5px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.07);
@@ -126,7 +126,7 @@
 
 /* Spacer inside shell — holds the image area height */
 .pc-img-space {
-    height: 175px;
+    height: 200px;
     flex-shrink: 0;
 }
 
@@ -136,7 +136,7 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 190px;
+    height: 215px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -145,9 +145,9 @@
     transition: transform 0.15s ease-out;
 }
 .pc-img-layer img {
-    width: 78%;
-    max-width: 175px;
-    height: 188px;
+    width: 82%;
+    max-width: 200px;
+    height: 212px;
     object-fit: contain;
     display: block;
     filter: drop-shadow(0 8px 20px rgba(0,0,0,0.18));
@@ -177,12 +177,16 @@
 /* ── Body text ── */
 .pc-body {
     flex: 1;
-    padding: 0 1.2rem 1.4rem;
+    padding: 0.8rem 1.2rem 1.4rem;
     display: flex;
     flex-direction: column;
     gap: 0.4rem;
     text-align: left;
     justify-content: space-between;
+    border-top: 1.5px solid #e8e0c8;
+}
+.product-swiper .swiper-slide-active .pc-body {
+    border-top: 1.5px solid rgba(245,234,195,0.55);
 }
 .pc-body-top {
     display: flex;
@@ -190,18 +194,7 @@
     gap: 0.4rem;
 }
 .pc-delivery {
-    font-size: 0.61rem;
-    font-weight: 700;
-    letter-spacing: 0.09em;
-    text-transform: uppercase;
-    padding-top: 0.5rem;
-    border-top: 1px solid #e8e0c8;
-    color: #6d7e2d;
-    transition: color 0.25s, border-color 0.25s;
-}
-.product-swiper .swiper-slide-active .pc-delivery {
-    color: rgba(253,246,231,0.4);
-    border-color: rgba(231, 253, 235, 0.85);
+    display: none;
 }
 .pc-name-row {
     display: flex;
@@ -210,43 +203,71 @@
     gap: 0.4rem;
 }
 .pc-name {
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: 800;
+    font-family: 'Nunito', sans-serif;
     color: #6d7e2d;
     transition: color 0.25s;
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+    flex-wrap: nowrap;
+}
+.pc-abbr {
+    font-size: 1.05rem;
+    font-weight: 900;
+    font-family: 'Nunito', sans-serif;
+    opacity: 0.85;
 }
 .product-swiper .swiper-slide-active .pc-name { color: #fdf6e7; }
 
+.pc-weight {
+    font-size: 0.95rem;
+    font-weight: 900;
+    font-family: 'Nunito', sans-serif;
+    color: #8aa74b;
+    margin-top: -2px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+.product-swiper .swiper-slide-active .pc-weight { color: rgba(245,234,195,0.75); }
+
 .pc-order {
-    font-size: 0.68rem;
+    font-size: 0.82rem;
     font-weight: 800;
+    font-family: 'Nunito', sans-serif;
     white-space: nowrap;
-    text-decoration: underline;
-    text-underline-offset: 2px;
+    text-decoration: none;
     flex-shrink: 0;
     color: #6d7e2d;
-    transition: color 0.25s;
+    background: #f5eac3;
+    padding: 8px 18px;
+    border-radius: 50px;
+    display: inline-block;
 }
-.product-swiper .swiper-slide-active .pc-order { color: #fdf6e7; }
 
-.pc-tags {
+.pc-packs {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 0.28rem;
 }
-.pc-tag {
-    font-size: 0.59rem;
-    font-weight: 700;
-    padding: 0.18rem 0.5rem;
-    border-radius: 20px;
-    background: #eeeade;
+.pc-pack {
+    font-size: 0.73rem;
+    font-weight: 800;
+    font-family: 'Nunito', sans-serif;
+    padding: 5px 12px;
+    border-radius: 10px;
+    border: 1.5px solid #8aa74b;
     color: #6d7e2d;
-    transition: background 0.25s, color 0.25s;
+    background: transparent;
+    cursor: pointer;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
-.product-swiper .swiper-slide-active .pc-tag {
-    background: rgba(253,246,231,0.1);
-    color: rgba(253,246,231,0.75);
-    border: 1px solid rgba(253,246,231,0.18);
+.product-swiper .swiper-slide-active .pc-pack {
+    border-color: rgba(245,234,195,0.55);
+    color: #f5eac3;
 }
 
 /* ============================================================
@@ -290,7 +311,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    padding-bottom: 18px;
+    padding-bottom: 0px;
     z-index: 5;
     pointer-events: none;
     opacity: 0;
@@ -370,14 +391,15 @@
                                         <div class="pc-body-top">
                                             <p class="pc-delivery">Free delivery until 30/06/2026</p>
                                             <div class="pc-name-row">
-                                                <span class="pc-name">Newborn (NB)</span>
+                                                <span class="pc-name">Newborn <span class="pc-abbr">(NB)</span></span>
                                                 <a href="#" class="pc-order">Order ↗</a>
                                             </div>
+                                            <span class="pc-weight">0 – 5 kg</span>
                                         </div>
-                                        <div class="pc-tags">
-                                            <span class="pc-tag">0–5 kg</span>
-                                            <span class="pc-tag">24 pcs</span>
-                                            <span class="pc-tag">Ultra Soft</span>
+                                        <div class="pc-packs">
+                                            <span class="pc-pack">3 Pcs</span>
+                                            <span class="pc-pack">24 Pcs</span>
+                                            <span class="pc-pack">54 Pcs</span>
                                         </div>
                                     </div>
                                 </div>
@@ -402,14 +424,15 @@
                                         <div class="pc-body-top">
                                             <p class="pc-delivery">Free delivery until 30/06/2026</p>
                                             <div class="pc-name-row">
-                                                <span class="pc-name">Small (S)</span>
+                                                <span class="pc-name">Small <span class="pc-abbr">(S)</span></span>
                                                 <a href="#" class="pc-order">Order ↗</a>
                                             </div>
+                                            <span class="pc-weight">3 – 8 kg</span>
                                         </div>
-                                        <div class="pc-tags">
-                                            <span class="pc-tag">3–8 kg</span>
-                                            <span class="pc-tag">36 pcs</span>
-                                            <span class="pc-tag">Leak Guard</span>
+                                        <div class="pc-packs">
+                                            <span class="pc-pack">3 Pcs</span>
+                                            <span class="pc-pack">24 Pcs</span>
+                                            <span class="pc-pack">54 Pcs</span>
                                         </div>
                                     </div>
                                 </div>
@@ -434,14 +457,14 @@
                                         <div class="pc-body-top">
                                             <p class="pc-delivery">Free delivery until 30/06/2026</p>
                                             <div class="pc-name-row">
-                                                <span class="pc-name">Medium (M)</span>
+                                                <span class="pc-name">Medium <span class="pc-abbr">(M)</span></span>
                                                 <a href="#" class="pc-order">Order ↗</a>
                                             </div>
+                                            <span class="pc-weight">6 – 11 kg</span>
                                         </div>
-                                        <div class="pc-tags">
-                                            <span class="pc-tag">6–11 kg</span>
-                                            <span class="pc-tag">32 pcs</span>
-                                            <span class="pc-tag">360° Fit</span>
+                                        <div class="pc-packs">
+                                            <span class="pc-pack">24 Pcs</span>
+                                            <span class="pc-pack">54 Pcs</span>
                                         </div>
                                     </div>
                                 </div>
@@ -467,14 +490,14 @@
                                         <div class="pc-body-top">
                                             <p class="pc-delivery">Free delivery until 30/06/2026</p>
                                             <div class="pc-name-row">
-                                                <span class="pc-name">Large (L)</span>
+                                                <span class="pc-name">Large <span class="pc-abbr">(L)</span></span>
                                                 <a href="#" class="pc-order">Order ↗</a>
                                             </div>
+                                            <span class="pc-weight">9 – 14 kg</span>
                                         </div>
-                                        <div class="pc-tags">
-                                            <span class="pc-tag">9–14 kg</span>
-                                            <span class="pc-tag">28 pcs</span>
-                                            <span class="pc-tag">Night Dry</span>
+                                        <div class="pc-packs">
+                                            <span class="pc-pack">24 Pcs</span>
+                                            <span class="pc-pack">54 Pcs</span>
                                         </div>
                                     </div>
                                 </div>
@@ -499,14 +522,14 @@
                                         <div class="pc-body-top">
                                             <p class="pc-delivery">Free delivery until 30/06/2026</p>
                                             <div class="pc-name-row">
-                                                <span class="pc-name">Extra Large (XL)</span>
+                                                <span class="pc-name">Extra Large <span class="pc-abbr">(XL)</span></span>
                                                 <a href="#" class="pc-order">Order ↗</a>
                                             </div>
+                                            <span class="pc-weight">12 – 17 kg</span>
                                         </div>
-                                        <div class="pc-tags">
-                                            <span class="pc-tag">12–17 kg</span>
-                                            <span class="pc-tag">24 pcs</span>
-                                            <span class="pc-tag">Active Fit</span>
+                                        <div class="pc-packs">
+                                            <span class="pc-pack">24 Pcs</span>
+                                            <span class="pc-pack">54 Pcs</span>
                                         </div>
                                     </div>
                                 </div>
